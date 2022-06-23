@@ -1,11 +1,11 @@
 import json
 import re
 from typing import Dict, List
-
-# <editor-fold desc="Costants">
 import nltk
 from nltk import WordNetLemmatizer
 from nltk.corpus import stopwords
+
+# <editor-fold desc="Costants">
 
 PUNCTUATION_MARKS = [',', '?', '!', '.', ';', ':', '\\', '/', '(', ')', '&', ' ', '_', '+', '=', '<', '>', '"']
 
@@ -123,8 +123,14 @@ SLANGS = {'afaik': 'as far as i know', 'afk': 'away from keyboard', 'asap': 'as 
 # <editor-fold desc="Directories">
 lex_resources_directory = "resources/test/lex_res"
 tweets_directory = "resources/test/tweets/"
+# </editor-fold>
 
-
+# <editor-fold desc="downloads">
+# nltk.download('punkt')
+# nltk.download('averaged_perceptron_tagger')
+# nltk.download('wordnet')
+# nltk.download('omw-1.4')
+# nltk.download('stopwords')
 # </editor-fold>
 
 
