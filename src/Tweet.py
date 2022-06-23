@@ -196,10 +196,11 @@ class Tweet:
 
     def read_emojis(self) -> None:
         self.emojis = get_elems_from_text_if_in_list(self.text, EMOJIS)
-        # TODO remove emojis after reaading them
+        # TODO remove emojis after reading them
 
     def read_emoticons(self) -> None:
         self.emoticons = get_elems_from_text_if_in_list(self.text, EMOTICONS)
+        # TODO remove emoticons after reading them
 
     def anonymize(self) -> None:
         self.text = self.text.replace("USERNAME", "").replace("URL", "")
