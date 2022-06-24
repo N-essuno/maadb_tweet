@@ -123,6 +123,8 @@ SLANGS = {'afaik': 'as far as i know', 'afk': 'away from keyboard', 'asap': 'as 
 # <editor-fold desc="Directories">
 lex_resources_directory = "resources/test/lex_res"
 tweets_directory = "resources/test/tweets/"
+
+
 # </editor-fold>
 
 # <editor-fold desc="downloads">
@@ -201,12 +203,16 @@ class Tweet:
         self.hashtags = re.findall(r"#(\w+)", self.text)
 
     def read_emojis(self) -> None:
-        self.emojis = get_elems_from_text_if_in_list(self.text, EMOJIS)
-        # TODO remove emojis after reading them
+        emojis = get_elems_from_text_if_in_list(self.text, EMOJIS)
+        text_emojis_removed = remove_words_from_string(self.text, emojis)
+        self.emojis = emojis
+        self.text = text_emojis_removed
 
     def read_emoticons(self) -> None:
-        self.emoticons = get_elems_from_text_if_in_list(self.text, EMOTICONS)
-        # TODO remove emoticons after reading them
+        emoticons = get_elems_from_text_if_in_list(self.text, EMOTICONS)
+        text_emoticons_removed = remove_words_from_string(self.text, emoticons)
+        self.emoticons = emoticons
+        self.text = text_emoticons_removed
 
     def anonymize(self) -> None:
         self.text = self.text.replace("USERNAME", "").replace("URL", "")
@@ -305,3 +311,12 @@ def removekey(d, key):
     r = dict(d)
     del r[key]
     return r
+
+
+def remove_words_from_string(string: str, words_to_remove: List[str]):
+    string_words = string.split()
+
+    string_words_clean = [word for word in string_words if word not in words_to_remove]
+    result = ' '.join(string_words_clean)
+
+    return result
