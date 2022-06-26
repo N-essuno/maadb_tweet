@@ -1,5 +1,6 @@
 from typing import List
 
+
 # Class used to store information about each tweet: its sentiment e how many words of which sentiment are in that tweet
 class LexicalResource:
     filename: str
