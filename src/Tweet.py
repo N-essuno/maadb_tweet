@@ -4,6 +4,10 @@ from typing import Dict, List
 import nltk
 from nltk import WordNetLemmatizer
 from nltk.corpus import stopwords
+import emoji # watch the correct package to install: Emoji for Python. This project was inspired by kyokomi.
+import functools
+import operator
+#from nltk.tokenize.casual import TweetTokenizer
 
 # <editor-fold desc="Costants">
 
@@ -121,8 +125,8 @@ SLANGS = {'afaik': 'as far as i know', 'afk': 'away from keyboard', 'asap': 'as 
 # </editor-fold>
 
 # <editor-fold desc="Directories">
-lex_resources_directory = "resources/test/lex_res"
-tweets_directory = "resources/test/tweets/"
+LEX_RESOURCES_DIRECTORY = "resources/test/lex_res/"
+TWEETS_DIRECTORY = "resources/test/tweets/"
 
 
 # </editor-fold>
@@ -195,14 +199,25 @@ class Tweet:
     def __str__(self):
         tweet_string = "Tweet\n"
         tweet_string = tweet_string + "\ttweet raw: " + self.text
-        tweet_string = tweet_string + "\tpos tags: " + json.dumps(self.pos_tags)
+        tweet_string = tweet_string + "\n\tpos tags: " + json.dumps(self.pos_tags)
+        tweet_string = tweet_string + "\n\temojis: " + str(self.emojis)
+        tweet_string = tweet_string + "\n\temoticons: " + str(self.emoticons)
+        tweet_string = tweet_string + "\n\thashtags: " + str(self.hashtags)
         tweet_string = tweet_string + "\n"
         return tweet_string
 
     def read_hashtags(self) -> None:
         self.hashtags = re.findall(r"#(\w+)", self.text)
+        to_remove = ['#' + hashtag for hashtag in self.hashtags]
+        text_hashtags_removed = remove_words_from_string(self.text, to_remove)
+        self.text = text_hashtags_removed
 
     def read_emojis(self) -> None:
+        em_split_emoji = emoji.get_emoji_regexp().split(self.text)
+        em_split_whitespace = [substr.split() for substr in em_split_emoji]
+        em_split = functools.reduce(operator.concat, em_split_whitespace)
+        self.text = ' '.join(em_split)
+
         emojis = get_elems_from_text_if_in_list(self.text, EMOJIS)
         text_emojis_removed = remove_words_from_string(self.text, emojis)
         self.emojis = emojis
@@ -222,6 +237,7 @@ class Tweet:
 
     def tokenize(self) -> None:
         # Questa funzione mi sa che non andava bene, poi vediamo
+        self.text = self.text.replace("'s", "").replace("'m", "").replace("'nt", "").replace("'re", "").replace("'t", "")
         self.tokens = nltk.word_tokenize(self.text)
         # self.tokens = sent_tokenize(self.text)
 
