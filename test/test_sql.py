@@ -1,5 +1,6 @@
 from src.LexicalResource import LexicalResource
 from src.MySqlQueries import DBConnection
+from src.Tweet import Tweet
 
 
 def test_db_connection():
@@ -22,12 +23,18 @@ def test_insert_lexical_resources():
     connection.insert_lexical_resources([lex_res_1, lex_res_2])
 
 
+def test_insert_tweets():
+    tweet1: Tweet = Tweet("mi piace ballar mi piace cantar", 0, "Joy")
+    tweet2: Tweet = Tweet("yes honey :'(", 0, "Sadness")
+
+    connection = test_db_connection()
+    connection.insert_tweets([tweet1, tweet2])
+
+
 def test_delete_lex_res():
     connection = test_db_connection()
     connection.delete_lex_res()
 
 
 if __name__ == "__main__":
-    test_insert_lexical_resources()
-    test_delete_lex_res()
-
+    test_insert_tweets()

@@ -4,6 +4,7 @@ from typing import List
 import mariadb
 
 from src.LexicalResource import LexicalResource
+from src.Tweet import Tweet
 
 
 def insert_int_or_string(query_string, value):
@@ -87,8 +88,44 @@ class DBConnection:
         self.launch_query(insert_query)
         print(self.cursor.rowcount, "record(s) inserted")
 
+    def insert_tweets(self, tweets: List[Tweet]):
+        for tweet in tweets:
+            # insert tweet
+            insert_tweet_query = "INSERT INTO tweet (sentiment) VALUES ('{}');".format(tweet.sentiment)
+            print(insert_tweet_query)
+            exit()
+            words = tweet.words
+            emojis = tweet.emojis
+            emoticons = tweet.emoticons
+            # insert words
+            # insert emojis
+            # insert emoticons
+
+
+        # for lexical_resource in lexical_resources:
+        #     # compose values to insert
+        #     name = lexical_resource.filename
+        #     sentiment = lexical_resource.sentiment
+        #     num_words = lexical_resource.get_number_of_words()
+        #
+        #     lexical_resources_values.append([name, num_words, sentiment])
+        #
+        # lexical_resources_values_query_format = convert_list_of_values_to_query_format(lexical_resources_values)
+        #
+        # insert_query = "INSERT INTO lexicalresource (name, num_words, sentiment) VALUES {};".format(
+        #     lexical_resources_values_query_format)
+        #
+        # self.launch_query(insert_query)
+        # print(self.cursor.rowcount, "record(s) inserted")
+
     def delete_lex_res(self):
         delete_query = "DELETE FROM lexicalresource"
+        self.launch_query(delete_query)
+        print(self.cursor.rowcount, "record(s) deleted")
+
+    def delete_tweets(self):
+        # TODO delete tweet contents in cascade
+        delete_query = "DELETE FROM tweets"
         self.launch_query(delete_query)
         print(self.cursor.rowcount, "record(s) deleted")
 
