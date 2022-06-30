@@ -58,7 +58,7 @@ def convert_list_of_values_to_query_format(list_of_values: List[List]) -> str:
 
     query_string += ")"
     return query_string
-
+#
 
 class DBConnection:
     already_connected_mariadb = False
