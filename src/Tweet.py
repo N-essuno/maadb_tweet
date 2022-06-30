@@ -6,6 +6,7 @@ from nltk import WordNetLemmatizer
 from nltk.corpus import stopwords
 
 # <editor-fold desc="Costants">
+from src.Token import Token
 
 PUNCTUATION_MARKS = [',', '?', '!', '.', ';', ':', '\\', '/', '(', ')', '&', ' ', '_', '+', '=', '<', '>', '"']
 
@@ -199,6 +200,18 @@ class Tweet:
         tweet_string = tweet_string + "\n"
         return tweet_string
 
+    def get_tokens(self) -> List[Token]:
+        token_list: List[Token] = []
+        for word in self.words:
+            token_list.append(Token(word, "word"))
+        for emoji in self.emojis:
+            token_list.append(Token(emoji, "emoji"))
+        for emoticon in self.emoticons:
+            token_list.append(Token(emoticon, "emoticon"))
+        for hashtag in self.hashtags:
+            token_list.append(Token(hashtag, "hashtag"))
+        return token_list
+
     def read_hashtags(self) -> None:
         self.hashtags = re.findall(r"#(\w+)", self.text)
 
@@ -291,7 +304,7 @@ class Tweet:
     # Support functions
 
     def get_words(self) -> List[str]:
-        return self.text.split()
+        return list(set(self.text.split()))
 
 
 def get_elems_from_text_if_in_list(text: str, words_list: List[str]) -> List[str]:
