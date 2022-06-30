@@ -169,7 +169,6 @@ class Tweet:
     emojis: List[str]
     emoticons: List[str]
     tokens: List[str]
-    words: List[str]
     pos_tags: Dict[str, str]
     tweet_stem_count: TweetInfo
     word_frequency: Dict[str, int] = {}
@@ -202,7 +201,7 @@ class Tweet:
 
     def get_tokens(self) -> List[Token]:
         token_list: List[Token] = []
-        for word in self.words:
+        for word in self.get_words():
             token_list.append(Token(word, "word"))
         for emoji in self.emojis:
             token_list.append(Token(emoji, "emoji"))
