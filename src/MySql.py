@@ -58,7 +58,7 @@ def convert_list_of_values_to_query_format(list_of_values: List[List]) -> str:
 
     query_string += ")"
     return query_string
-#
+
 
 class DBConnection:
     already_connected_mariadb = False
@@ -210,7 +210,7 @@ class DBConnection:
         tweet_ids = []
         for sentiment in sentiments:
             insert_tweet_query = "INSERT INTO tweet(sentiment) VALUES (%s);"
-            self.cursor.execute(insert_tweet_query, (sentiment, ))
+            self.cursor.execute(insert_tweet_query, (sentiment,))
             tweet_ids.append(self.cursor.lastrowid)
         return tweet_ids
 
@@ -272,10 +272,30 @@ class DBConnection:
 
     def delete_tweets(self):
         # TODO delete tweet contents in cascade
-        delete_query = "DELETE FROM tweets"
+        delete_query = "DELETE FROM tweet"
         self.launch_query(delete_query)
         print(self.cursor.rowcount, "record(s) deleted")
 
     def launch_query(self, query):
         self.cursor.execute(query)
         self.db_connection.commit()
+
+    def get_x_most_used_words_for_sentiment(self, x: int, sentiment: str):
+        print(sentiment)
+        query = ("SELECT tok.content, COUNT(tok.content) "
+                 "FROM tweet AS t "
+                 "JOIN	tweettoken AS tt ON t.id = tt.tweet "
+                 "JOIN	token tok ON tt.content = tok.content "
+                 "    AND tt.content_type = tok.content_type "
+                 "WHERE t.sentiment = %s "
+                 "    AND tok.content_type = 'word' "
+                 "GROUP BY tok.content "
+                 "ORDER BY COUNT(tok.content) DESC "
+                 "LIMIT %s; ")
+        # query = "SELECT COUNT(tok.content), tok.content FROM tweet AS t JOIN	tweettoken AS tt ON t.id = tt.tweet
+        # JOIN	token tok ON tt.content = tok.content AND tt.content_type = tok.content_type WHERE t.sentiment = %s
+        # AND tok.content_type = 'word' GROUP BY tok.content ORDER BY COUNT(tok.content) DESC LIMIT %s;"
+        query_parameters: Tuple[str, int] = (sentiment, x)
+        self.cursor.execute(query, query_parameters)
+        result = self.cursor.fetchall()
+        print(result)

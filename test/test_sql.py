@@ -46,10 +46,16 @@ def test_insert_contents(content_type: str):
 
 def test_insert_tweets():
     tweet1: Tweet = Tweet("mi piace ballar mi piace cantar", 0, "Joy")
-    tweet2: Tweet = Tweet("yes honey :'(", 0, "Sadness")
+    tweet2: Tweet = Tweet("mi piace ballar mi piace cantar e giocar, yes honey", 0, "Joy")
+    tweet3: Tweet = Tweet("yes honey :'(", 0, "Sadness")
 
     connection = test_db_connection()
-    connection.insert_tweets([tweet1, tweet2])
+    connection.insert_tweets([tweet1, tweet2, tweet3])
+
+
+def test_delete_all_tweets():
+    connection = test_db_connection()
+    connection.delete_tweets()
 
 
 def test_delete_lex_res():
@@ -67,7 +73,10 @@ def test_insert_delete_lex_res():
     test_delete_lex_res()
 
 
+def test_pipeline1():
+    pass
+
+
 if __name__ == "__main__":
-    # test_delete_contents("word")
-    # test_insert_contents("word")
-    test_insert_tweets()
+    conn = test_db_connection()
+    conn.get_x_most_used_words_for_sentiment(5, "Joy")
