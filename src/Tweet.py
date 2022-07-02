@@ -17,11 +17,13 @@ PUNCTUATION_MARKS = [',', '?', '!', '.', ';', ':', '\\', '/', '(', ')', '&', ' '
 
 EMOTICONS_POS = ['B-)', ':)', ':-)', ":')", ":'-)", ':D', ':-D', ':\'-)', ":')", ':o)', ':]', ':3', ':c)', ':>', '=]',
                  '8)', '=)', ':}', ':^)', '8-D', '8D', 'x-D', 'xD', 'X-D', 'XD', '=-D', '=D', '=-3', '=3', 'B^D',
-                 ':-))', ':*', ':^*', '( \'}{\' )', '^^', '(^_^)', '^-^', "^.^", "^3\^", "\^L\^", ";)", "o.o", "O.O", "<3", ':P', ':p']
+                 ':-))', ':*', ':^*', '( \'}{\' )', '^^', '(^_^)', '^-^', "^.^", "^3\^", "\^L\^", ";)", "o.o", "O.O",
+                 "<3", ':P', ':p']
 EMOTICONS_NEG = [':(', ':-(', ":'(", ":'-(", '>:[', ':-c', ':c', ':-<', ':<', ':-[', ':[', ':{', ':\'-(', ':\'(',
                  ' _( ', ':\'[', "='(", "' [", "='[", ":'-<", ":' <", ":'<", "=' <", "='<", "T_T", "T.T", "(T_T)",
                  "y_y", "y.y", "(Y_Y)", ";-;", ";_;", ";.;", ":_:", "o .__. o", ".-.", ":/", ";(", "=/", "0_o", "o_0",
-                 "o_o", "O_O", "o_O", "O_o", "o_o", "0_O", "O_0", "-___-", "-_____-", "=d"]
+                 "o_o", "O_O", "o_O", "O_o", "o_o", "0_O", "O_0", "0.o", "o.0", "o.o", "O.O", "o.O", "O.o", "o.o",
+                 "0.O", "O.0" "-___-", "-_____-", "=d", 'xd', 'dx']
 EMOTICONS = EMOTICONS_NEG + EMOTICONS_POS
 
 EMOJI_POS = [u'\U0001F601', u'\U0001F602', u'\U0001F603', u'\U0001F604', u'\U0001F605', u'\U0001F606', u'\U0001F609',
@@ -104,7 +106,8 @@ OTHER_EMOJIS = [u'\U0001F004', u'\U0001F0CF', u'\U0001F300', u'\U0001F301', u'\U
                 u'\U0001F639', u'\U0001F63A', u'\U0001F63B', u'\U0001F63C', u'\U0001F63D', u'\U0001F63E', u'\U0001F63F',
                 u'\U0001F640', u'\U0001F645', u'\U0001F646', u'\U0001F647', u'\U0001F648', u'\U0001F649', u'\U0001F64A',
                 u'\U0001F64B', u'\U0001F64C', u'\U0001F64E', u'\U0001F64F', u'\U0001F64F', u'\U00002764', u'\U0001F610',
-                u'\U0001F611', u'\U00002665', u'\U0001F62E', u'\U0001F632', u'\U0000270C', u'\U0001F354']
+                u'\U0001F611', u'\U00002665', u'\U0001F62E', u'\U0001F632', u'\U0000270C', u'\U0001F354', u'\U0001F62F',
+                u'\U0001F61B']
 # AdditionalEmoji=[u'\U+203C',u'\U+2049', u'\U+231A',u'\U+231B',u'\U+2600',u'\U+2601',u'\U+260E',u'\U+2611',u'\U+2614',u'\U+2615',u'\U+261D',u'\U+2648',u'\U+2648',u'\U+2649',u'\U+264A',u'\U+264B',u'\U+264C',u'\U+264D',u'\U+264E',u'\U+264F',u'\U+2650',u'\U+2651',u'\U+2652',u'\U+2653',u'\U+2660',u'\U+2663',u'\U+2665',u'\U+2666',u'\U+2668',u'\U+267B',u'\U+267F',u'\U+2693',u'\U+26A0',u'\U+26A1',u'\U+26AA',u'\U+26AB',u'\U+26BD',u'\U+26BE',u'\U+26C4',u'\U+26C5',u'\U+26CE',u'\U+26D4',u'\U+26EA',u'\U+26F2',u'\U+26F3',u'\U+26F5',u'\U+26FA',u'\U+26FD',u'\U+2934',u'\U+2935',u'\U+2934',u'\U+2B05',u'\U+2B06',u'\U+2B07',u'\U+2B50',u'\U+2B55',u'\U+2B50']
 EMOJIS = EMOJI_POS + EMOJI_NEG + OTHER_EMOJIS
 
@@ -123,7 +126,7 @@ SLANGS = {'afaik': 'as far as i know', 'afk': 'away from keyboard', 'asap': 'as 
           'rofl': 'rolling on the floor laughing', 'roflol': 'rolling on the floor laughing out loud',
           'rotflmao': 'rolling on the floor laughing my a.. off', 'sk8': 'skate', 'stats': 'your sex and age',
           'asl': 'age, sex, location', 'thx': 'thank you', 'ttfn': 'ta-ta for now!', 'ttyl': 'talk to you later',
-          ' u': ' you', 'u ': 'you ', 'u.': 'you.', 'u2': 'you too', 'u4e': 'yours for ever', 'wb': 'welcome back',
+          'u.': 'you.', 'u2': 'you too', 'u4e': 'yours for ever', 'wb': 'welcome back',
           'wtf': 'what the f...', ' u ': 'you', 'lololol': 'laughing out loud', 'lolol': 'laughing out loud',
           'lololololol': 'laughing out loud',
           'wtg': 'way to go!', 'wuf': 'where are you from?', 'w8': 'wait...', '7k': 'sick:-d laugher'}
@@ -177,6 +180,7 @@ class Tweet:
     emojis: List[str]
     emoticons: List[str]
     tokens: List[str]
+    words: List[str]
     pos_tags: Dict[str, str]
     tweet_stem_count: TweetInfo
     word_frequency: Dict[str, int] = {}
@@ -253,7 +257,8 @@ class Tweet:
 
     def tokenize(self) -> None:
         # Questa funzione mi sa che non andava bene, poi vediamo
-        self.text = self.text.replace("'s", "").replace("'m", "").replace("'nt", "").replace("'re", "").replace("'t", "").replace("'ve", "")
+        self.text = self.text.replace("'s", "").replace("'m", "").replace("'nt", "")\
+            .replace("'re", "").replace("'t", "").replace("'ve", "").replace("'ll", "")
         self.tokens = nltk.word_tokenize(self.text)
         # self.tokens = sent_tokenize(self.text)
 
