@@ -111,18 +111,27 @@ class DBConnection:
 
     def insert_lexical_resources(self, lexical_resources: List[LexicalResource]):
         lexical_resources_values = []
+        lexical_resources_words_values = []
         for lexical_resource in lexical_resources:
             # compose values to insert
             name = lexical_resource.filename
             sentiment = lexical_resource.sentiment
             num_words = lexical_resource.get_number_of_words()
+            word_list = lexical_resource.word_list
 
+            # append lexical resource record to insert
             lexical_resources_values.append([name, num_words, sentiment])
 
-        insert_query = "INSERT INTO lexicalresource (name, num_words, sentiment) VALUES (%s, %s, %s);"
-        self.cursor.executemany(insert_query, lexical_resources_values)
+            for word in word_list:
+                lexical_resources_words_values.append([name, word])
+
+        insert_lex_res_query = "INSERT INTO lexicalresource (name, num_words, sentiment) VALUES (%s, %s, %s);"
+        insert_lex_res_words_query = "INSERT INTO lexicalresourceword (lexicalresource, word) VALUES (%s, %s);"
+        self.cursor.executemany(insert_lex_res_query, lexical_resources_values)
+        print(self.cursor.rowcount, "lexical resource(s) inserted")
+        self.cursor.executemany(insert_lex_res_words_query, lexical_resources_words_values)
+        print(self.cursor.rowcount, "lexical resource word(s) inserted")
         self.db_connection.commit()
-        print(self.cursor.rowcount, "record(s) inserted")
 
     def insert_contents(self, contents: List[str], contents_type: str, check_duplicates: bool = True):
         tokens = []
