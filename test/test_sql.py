@@ -74,9 +74,9 @@ def test_insert_delete_lex_res():
 
 
 def test_pipeline1():
-    pass
+    conn = test_db_connection()
+    conn.get_x_most_used_words_for_sentiment(5, "Joy")
 
 
 if __name__ == "__main__":
-    conn = test_db_connection()
-    conn.get_x_most_used_words_for_sentiment(5, "Joy")
+    test_insert_lexical_resources()
