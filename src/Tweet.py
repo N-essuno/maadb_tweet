@@ -129,13 +129,13 @@ SLANGS = {'afaik': 'as far as i know', 'afk': 'away from keyboard', 'asap': 'as 
           'asl': 'age, sex, location', 'thx': 'thank you', 'ttfn': 'ta-ta for now!', 'ttyl': 'talk to you later',
           'u.': 'you.', 'u2': 'you too', 'u4e': 'yours for ever', 'wb': 'welcome back',
           'wtf': 'what the f...', ' u ': 'you', 'lololol': 'laughing out loud', 'lolol': 'laughing out loud',
-          'lololololol': 'laughing out loud',
+          'lololololol': 'laughing out loud', 'omg': 'oh my god',
           'wtg': 'way to go!', 'wuf': 'where are you from?', 'w8': 'wait...', '7k': 'sick:-d laugher'}
 # </editor-fold>
 
 # <editor-fold desc="Directories">
-LEX_RESOURCES_DIRECTORY = "resources/test/lex_res/"
-TWEETS_DIRECTORY = "resources/test/tweets/"
+LEX_RESOURCES_DIRECTORY = "resources/lex_res/"
+TWEETS_DIRECTORY = "resources/tweets/"
 
 
 # </editor-fold>
@@ -187,6 +187,7 @@ class Tweet:
     word_frequency: Dict[str, int] = {}
     sentiment: str
     map_old_pos_tag_new_pos_tag: Dict[str, str] = {}
+    old_pos_tags: Dict[str, str]
 
     def __init__(self, tweet_raw: str, index: int, sentiment: str):
         self.index = index
@@ -213,6 +214,7 @@ class Tweet:
         tweet_string = tweet_string + "\n\temojis: " + str(self.emojis)
         tweet_string = tweet_string + "\n\temoticons: " + str(self.emoticons)
         tweet_string = tweet_string + "\n\thashtags: " + str(self.hashtags)
+        tweet_string = tweet_string + "\n\ttokens: " + str(self.tokens)
         tweet_string = tweet_string + "\n\twords frequency: " + str(self.word_frequency)
         tweet_string = tweet_string + "\n"
         return tweet_string
@@ -280,7 +282,7 @@ class Tweet:
     def tokenize(self) -> None:
         # Questa funzione mi sa che non andava bene, poi vediamo
         self.text = self.text.replace("'s", "").replace("'m", "").replace("'nt", "")\
-            .replace("'re", "").replace("'t", "").replace("'ve", "").replace("'ll", "")
+            .replace("'re", "").replace("'t", "").replace("'ve", "").replace("'ll", "").replace("'d", "")
         self.tokens = nltk.word_tokenize(self.text)
         # self.tokens = sent_tokenize(self.text)
 
@@ -329,6 +331,7 @@ class Tweet:
             new_pos_tags[lemmatized_word] = old_pos_tags[tag_key]
             self.map_old_pos_tag_new_pos_tag[tag_key] = lemmatized_word
 
+        self.old_pos_tags = old_pos_tags
         self.pos_tags = new_pos_tags
 
     def remove_stop_words(self) -> None:
@@ -356,7 +359,7 @@ class Tweet:
         tokens = self.tokens
 
         word_freq = {}
-        for word in self.words:
+        for word in self.old_pos_tags:
             if self.map_old_pos_tag_new_pos_tag.get(word) is not None:
                 word_after_lemming = self.map_old_pos_tag_new_pos_tag[word]
                 word_freq[word_after_lemming] = tokens.count(word)
