@@ -2,11 +2,12 @@ import json
 import re
 from typing import Dict, List
 import nltk
-from nltk import WordNetLemmatizer
 from nltk.corpus import stopwords
 import emoji # watch the correct package to install: Emoji for Python. This project was inspired by kyokomi.
 import functools
 import operator
+from nltk.stem.wordnet import WordNetLemmatizer
+from nltk.corpus import wordnet
 #from nltk.tokenize.casual import TweetTokenizer
 
 # <editor-fold desc="Costants">
@@ -185,6 +186,7 @@ class Tweet:
     tweet_stem_count: TweetInfo
     word_frequency: Dict[str, int] = {}
     sentiment: str
+    map_old_pos_tag_new_pos_tag: Dict[str, str] = {}
 
     def __init__(self, tweet_raw: str, index: int, sentiment: str):
         self.index = index
@@ -211,20 +213,40 @@ class Tweet:
         tweet_string = tweet_string + "\n\temojis: " + str(self.emojis)
         tweet_string = tweet_string + "\n\temoticons: " + str(self.emoticons)
         tweet_string = tweet_string + "\n\thashtags: " + str(self.hashtags)
+        tweet_string = tweet_string + "\n\twords frequency: " + str(self.word_frequency)
         tweet_string = tweet_string + "\n"
         return tweet_string
 
+
     def get_tokens(self) -> Dict[Token, int]:
-        token_list: List[Token] = []
-        for word in self.get_words():
-            token_list.append(Token(word, "word"))
+        map_token_frequency: Dict[Token, int] = {}
+
+        for word in self.word_frequency:
+            freq = self.word_frequency[word]
+            map_token_frequency[Token(word, "word")] = freq
+
         for emoji in self.emojis:
-            token_list.append(Token(emoji, "emoji"))
+            if map_token_frequency.get(Token(emoji, "emoji")) is None:
+                map_token_frequency[Token(emoji, "emoji")] = 1
+            else:
+                count = map_token_frequency[Token(emoji, "emoji")]
+                map_token_frequency[Token(emoji, "emoji")] = count + 1
+
         for emoticon in self.emoticons:
-            token_list.append(Token(emoticon, "emoticon"))
+            if map_token_frequency.get(Token(emoticon, "emoticon")) is None:
+                map_token_frequency[Token(emoticon, "emoticon")] = 1
+            else:
+                count = map_token_frequency[Token(emoticon, "emoticon")]
+                map_token_frequency[Token(emoticon, "emoticon")] = count + 1
+
         for hashtag in self.hashtags:
-            token_list.append(Token(hashtag, "hashtag"))
-        return token_list
+            if map_token_frequency.get(Token(hashtag, "hashtag")) is None:
+                map_token_frequency[Token(hashtag, "hashtag")] = 1
+            else:
+                count = map_token_frequency[Token(hashtag, "hashtag")]
+                map_token_frequency[Token(hashtag, "hashtag")] = count + 1
+
+        return map_token_frequency
 
     def read_hashtags(self) -> None:
         self.hashtags = re.findall(r"#(\w+)", self.text)
@@ -274,13 +296,18 @@ class Tweet:
 
         self.pos_tags = pos_tag_dict
 
-    def remove_punctuation(self) -> None:  # rimuove anche emoticons, giusto?
+    def remove_punctuation(self) -> None:
         # Removes every character besides lower and uppercase letters, numbers and spaces
         # self.text = re.sub(r'[^a-zA-Z0-9 ]', '', self.text)
         for tag_key in list(self.pos_tags.keys()):
             if tag_key in PUNCTUATION_MARKS:
                 # tag key is a punctuation mark, so remove from pos tagging list
                 del self.pos_tags[tag_key]
+
+        for word in self.tokens:
+            if word in PUNCTUATION_MARKS:
+                # tag key is a punctuation mark, so remove from tokens list
+                self.tokens.remove(word)
 
     def print_tweet(self) -> None:
         print("tweet raw: ", self.text)
@@ -292,16 +319,19 @@ class Tweet:
         # print("\n\twords_list ", self.get_words())
 
     def lemming(self) -> None:
+        # self.map_old_pos_tag_new_pos_tag = {}
         lemmatizer = WordNetLemmatizer()
-        tweet_words_lemmatized: List[str] = []
+        new_pos_tags = {}
+        old_pos_tags = self.pos_tags
 
-        tweet_words = self.get_words()
-        for word in tweet_words:
-            tweet_words_lemmatized.append(lemmatizer.lemmatize(word))
+        for tag_key in old_pos_tags:
+            lemmatized_word = lemmatizer.lemmatize(tag_key, get_wordnet_pos(old_pos_tags[tag_key]))
+            new_pos_tags[lemmatized_word] = old_pos_tags[tag_key]
+            self.map_old_pos_tag_new_pos_tag[tag_key] = lemmatized_word
+
+        self.pos_tags = new_pos_tags
 
     def remove_stop_words(self) -> None:
-
-        # TODO implement this
         stop_words = set(stopwords.words('english'))
 
         tokens = self.tokens
@@ -321,9 +351,19 @@ class Tweet:
             self.text = self.text.replace(slang, SLANGS[slang])
 
     def count_words_frequency(self):
-        words = self.words
-        for word in words:
-            self.word_frequency[word] = words.count(word)
+        # print(self.tokens)
+        # print(self.words)
+        tokens = self.tokens
+
+        word_freq = {}
+        for word in self.words:
+            if self.map_old_pos_tag_new_pos_tag.get(word) is not None:
+                word_after_lemming = self.map_old_pos_tag_new_pos_tag[word]
+                word_freq[word_after_lemming] = tokens.count(word)
+            else:
+                word_freq[word] = tokens.count(word)
+
+        self.word_frequency = word_freq
 
     # Support functions
 
@@ -357,3 +397,17 @@ def remove_words_from_string(string: str, words_to_remove: List[str]):
     result = ' '.join(string_words_clean)
 
     return result
+
+
+def get_wordnet_pos(treebank_tag):
+
+    if treebank_tag.startswith('J'):
+        return wordnet.ADJ
+    elif treebank_tag.startswith('V'):
+        return wordnet.VERB
+    elif treebank_tag.startswith('N'):
+        return wordnet.NOUN
+    elif treebank_tag.startswith('R'):
+        return wordnet.ADV
+    else:
+        return wordnet.NOUN
