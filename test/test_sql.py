@@ -88,4 +88,4 @@ def test_pipeline2():
 
 
 if __name__ == "__main__":
-    test_pipeline2()
+    test_insert_tweets()

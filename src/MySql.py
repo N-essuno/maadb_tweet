@@ -237,26 +237,34 @@ class DBConnection:
             tweet_ids.append(self.cursor.lastrowid)
         return tweet_ids
 
-    def insert_tweets_tokens(self, tweet_id_tokens_list: List[Tuple[int, List[Token]]]):
-        tweet_token_records = []
+    def insert_tweets_tokens(self, tweet_id_tokens_list: List[Tuple[int, List[Tuple[Token, int]]]]):
+        """
+        Inserts tweet_tokens in db.-
+        :param tweet_id_tokens_list: List of tweet_ids and list of token and frequency for that tweet
+        """
+        tweet_token_records: List[Tuple[int, str, str, int]] = []
         for tweet_id_tokens in tweet_id_tokens_list:
             tweet_id = tweet_id_tokens[0]
-            tweet_tokens = tweet_id_tokens[1]
-            for token in tweet_tokens:
-                tweet_token_records.append((tweet_id, token.content, token.content_type))
+            tweet_tokens_frequency_list: List[Tuple[Token, int]] = tweet_id_tokens[1]
+            for token_frequency in tweet_tokens_frequency_list:
+                token = token_frequency[0]
+                token_frequency = token_frequency[1]
+                tweet_token_records.append((tweet_id, token.content, token.content_type, token_frequency))
         insert_tweets_records_query = \
-            "INSERT INTO tweettoken(tweet, content, content_type) VALUES (%s, %s, %s);"
+            "INSERT INTO tweettoken(tweet, content, content_type, frequency) VALUES (%s, %s, %s, %s);"
         self.cursor.executemany(insert_tweets_records_query, tweet_token_records)
 
     def insert_tweets(self, tweets: List[Tweet]):
-        tweets_tokens: Dict[Tweet, List[Token]] = {}
+        tweets_tokens_frequency: Dict[Tweet, List[Tuple[Token, int]]] = {}
         tokens_list: List[Token] = []
         tweets_sentiments: List[str] = []
 
         # fill lists
         for tweet in tweets:
             tokens = tweet.get_tokens()
-            tweets_tokens[tweet] = tokens
+            tweet_token_frequency_tuple = [(k, v) for k, v in tokens.items()]
+
+            tweets_tokens_frequency[tweet] = tweet_token_frequency_tuple
             tokens_list += tokens
             tweets_sentiments.append(tweet.sentiment)
         # insert tokens
@@ -266,14 +274,16 @@ class DBConnection:
         tweet_ids = self.insert_tweets_records_get_ids(tweets_sentiments)
 
         # list of tuples containing tweet id and list of tokens for tweet
-        tweet_ids_token_list: List[Tuple[int, List[Token]]] = []
+        tweet_ids_token_list: List[Tuple[int, List[Tuple[Token, int]]]] = []
         for index, tweet in enumerate(tweets):
             # get tweet id in db
             tweet_id = tweet_ids[index]
             # get tokens for tweet
-            token_list = tweet.get_tokens()
-            tweet_id_tokens_tuple = (tweet_id, token_list)
-            tweet_ids_token_list.append(tweet_id_tokens_tuple)
+            token_frequency_dict = tweet.get_tokens()
+            # convert dict to list of tuple[token, frequency]
+            token_frequency_list = [(k, v) for k, v in token_frequency_dict.items()]
+            tweet_id_token_frequency_tuple = (tweet_id, token_frequency_list)
+            tweet_ids_token_list.append(tweet_id_token_frequency_tuple)
 
         # insert tweet_tokens
         self.insert_tweets_tokens(tweet_ids_token_list)
