@@ -218,17 +218,35 @@ class Tweet:
         return tweet_string
 
 
-    def get_tokens(self) -> List[Token]:
-        token_list: List[Token] = []
-        for word in self.tokens:
-            token_list.append(Token(word, "word"))
+    def get_tokens(self) -> Dict[Token, int]:
+        map_token_frequency: Dict[Token, int] = {}
+
+        for word in self.word_frequency:
+            freq = self.word_frequency[word]
+            map_token_frequency[Token(word, "word")] = freq
+
         for emoji in self.emojis:
-            token_list.append(Token(emoji, "emoji"))
+            if map_token_frequency.get(Token(emoji, "emoji")) is None:
+                map_token_frequency[Token(emoji, "emoji")] = 1
+            else:
+                count = map_token_frequency[Token(emoji, "emoji")]
+                map_token_frequency[Token(emoji, "emoji")] = count + 1
+
         for emoticon in self.emoticons:
-            token_list.append(Token(emoticon, "emoticon"))
+            if map_token_frequency.get(Token(emoticon, "emoticon")) is None:
+                map_token_frequency[Token(emoticon, "emoticon")] = 1
+            else:
+                count = map_token_frequency[Token(emoticon, "emoticon")]
+                map_token_frequency[Token(emoticon, "emoticon")] = count + 1
+
         for hashtag in self.hashtags:
-            token_list.append(Token(hashtag, "hashtag"))
-        return token_list
+            if map_token_frequency.get(Token(hashtag, "hashtag")) is None:
+                map_token_frequency[Token(hashtag, "hashtag")] = 1
+            else:
+                count = map_token_frequency[Token(hashtag, "hashtag")]
+                map_token_frequency[Token(hashtag, "hashtag")] = count + 1
+
+        return map_token_frequency
 
     def read_hashtags(self) -> None:
         self.hashtags = re.findall(r"#(\w+)", self.text)
@@ -278,7 +296,7 @@ class Tweet:
 
         self.pos_tags = pos_tag_dict
 
-    def remove_punctuation(self) -> None:  # rimuove anche emoticons, giusto?
+    def remove_punctuation(self) -> None:
         # Removes every character besides lower and uppercase letters, numbers and spaces
         # self.text = re.sub(r'[^a-zA-Z0-9 ]', '', self.text)
         for tag_key in list(self.pos_tags.keys()):
