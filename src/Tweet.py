@@ -214,7 +214,7 @@ class Tweet:
         tweet_string = tweet_string + "\n"
         return tweet_string
 
-    def get_tokens(self) -> List[Token]:
+    def get_tokens(self) -> Dict[Token, int]:
         token_list: List[Token] = []
         for word in self.get_words():
             token_list.append(Token(word, "word"))

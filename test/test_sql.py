@@ -4,10 +4,22 @@ from src.LexicalResource import LexicalResource
 from src.MySql import DBConnection, Token
 from src.Tweet import Tweet
 
+# test tokens
 token1 = Token("ciao", "word")
 token1_copy = Token("ciao", "word")
 token2 = Token("ciao2", "word")
 token_list = [token1, token2]
+
+# test lexical resources
+lex_res_1: LexicalResource = LexicalResource("filename1", "Joy")
+lex_res_2: LexicalResource = LexicalResource("filename2", "sentiment2")
+
+lex_res_1.add_word("mi")
+lex_res_1.add_word("piace")
+lex_res_1.add_word("Gianguria")
+
+lex_res_2.add_word("pinocchio")
+lex_res_2.add_word("ginocchio")
 
 
 def test_db_connection():
@@ -25,15 +37,6 @@ def test_select_tokens_from_list() -> List[Token]:
 
 
 def test_insert_lexical_resources():
-    lex_res_1: LexicalResource = LexicalResource("filename1", "sentiment1")
-    lex_res_2: LexicalResource = LexicalResource("filename2", "sentiment2")
-
-    lex_res_1.add_word("pino")
-    lex_res_1.add_word("gino")
-
-    lex_res_2.add_word("pinocchio")
-    lex_res_2.add_word("ginocchio")
-
     connection = test_db_connection()
     connection.insert_lexical_resources([lex_res_1, lex_res_2])
 
@@ -78,5 +81,11 @@ def test_pipeline1():
     conn.get_x_most_used_words_for_sentiment(5, "Joy")
 
 
+def test_pipeline2():
+    conn = test_db_connection()
+    words = conn.get_percentage_words_lex_res_appear_in_tweet_of_same_sentiment(lex_res_1)
+    print(words)
+
+
 if __name__ == "__main__":
-    test_insert_lexical_resources()
+    test_pipeline2()

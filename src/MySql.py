@@ -1,4 +1,6 @@
+import pathlib
 import sys
+from pathlib import Path
 from typing import List, Tuple, Dict
 
 import mariadb
@@ -8,6 +10,18 @@ from mysql.connector.cursor import MySQLCursor
 from src.LexicalResource import LexicalResource
 from src.Token import Token
 from src.Tweet import Tweet
+
+
+PATH_CURRENT_DIRECTORY: Path = pathlib.Path(__file__).parent.resolve()
+
+
+PATH_SQL_FILES: Path = PATH_CURRENT_DIRECTORY.joinpath("queries")
+PATH_SQL_PIPELINE2: Path = PATH_SQL_FILES.joinpath("pipeline2.sql")
+
+
+def read_query(path: Path) -> str:
+    query_file = open(path, "r")
+    return query_file.read()
 
 
 def get_contents_of_tokens(tokens: List[Token]) -> List[str]:
@@ -224,8 +238,6 @@ class DBConnection:
         return tweet_ids
 
     def insert_tweets_tokens(self, tweet_id_tokens_list: List[Tuple[int, List[Token]]]):
-        # TODO write this, pass the tuple with tweets and tokens to insert
-
         tweet_token_records = []
         for tweet_id_tokens in tweet_id_tokens_list:
             tweet_id = tweet_id_tokens[0]
@@ -308,3 +320,18 @@ class DBConnection:
         self.cursor.execute(query, query_parameters)
         result = self.cursor.fetchall()
         print(result)
+
+    def get_percentage_words_lex_res_appear_in_tweet_of_same_sentiment(self, lex_res: LexicalResource) -> float:
+        """
+        Returns percentage of words from lex_res that appear at least once in a Tweet of the same sentiment as lex_res
+        :param lex_res: lexical resource which words we want to check
+        """
+        query = read_query(PATH_SQL_PIPELINE2)
+        query_parameters: Tuple[str] = (lex_res.sentiment, )
+
+        self.cursor.execute(query, query_parameters)
+        result = self.cursor.fetchall()
+        num_words_found: int = result[0][0]
+        num_total_words: int = len(lex_res.word_list)
+
+        return num_words_found/num_total_words * 100
