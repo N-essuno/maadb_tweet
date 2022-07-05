@@ -130,7 +130,7 @@ class DBConnection:
             name = lexical_resource.filename
             sentiment = lexical_resource.sentiment
             num_words = lexical_resource.get_number_of_words()
-            word_list = lexical_resource.word_list
+            word_list = lexical_resource.words
 
             # append lexical resource record to insert
             lexical_resources_values.append([name, num_words, sentiment])
@@ -287,7 +287,7 @@ class DBConnection:
         self.cursor.execute(query, query_parameters)
         result = self.cursor.fetchall()
         num_words_found: int = result[0][0]
-        num_total_words: int = len(lex_res.word_list)
+        num_total_words: int = len(lex_res.words)
 
         return num_words_found / num_total_words * 100
 
