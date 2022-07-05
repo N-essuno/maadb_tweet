@@ -107,6 +107,8 @@ class DBConnection:
         # returns tokens contents are already in db
         # for token in tokens:
         #     print(token)
+        if len(tokens) <= 0:
+            return []
 
         tokens_content = get_contents_of_tokens(tokens)
 
@@ -171,14 +173,17 @@ class DBConnection:
         insert_query = "INSERT INTO token (content, content_type) VALUES (%s, %s);"
         tokens_tuples = list_of_tokens_to_list_of_tuples(tokens)
         self.cursor.executemany(insert_query, tokens_tuples)
-        print(self.cursor.rowcount, "record(s) inserted")
+        print(self.cursor.rowcount, "token(s) inserted")
 
     def insert_tweets_records_get_ids(self, sentiments: List[str]) -> List[int]:
         tweet_ids = []
+        tweets_inserted = 0
         for sentiment in sentiments:
             insert_tweet_query = "INSERT INTO tweet(sentiment) VALUES (%s);"
+            tweets_inserted += self.cursor.rowcount
             self.cursor.execute(insert_tweet_query, (sentiment,))
             tweet_ids.append(self.cursor.lastrowid)
+        print(tweets_inserted, "tweet(s) inserted")
         return tweet_ids
 
     def insert_tweets_tokens(self, tweet_id_tokens_list: List[Tuple[int, List[Tuple[Token, int]]]]):
@@ -195,8 +200,9 @@ class DBConnection:
                 token_frequency = token_frequency[1]
                 tweet_token_records.append((tweet_id, token.content, token.content_type, token_frequency))
         insert_tweets_records_query = \
-            "INSERT INTO tweettoken(tweet, content, content_type, frequency) VALUES (%s, %s, %s, %s);"
+            "INSERT INTO tweettoken(tweet, content, content_type, frequency) VALUES     (%s, %s, %s, %s);"
         self.cursor.executemany(insert_tweets_records_query, tweet_token_records)
+        print(self.cursor.rowcount, "tweet_token(s) inserted")
 
     def insert_tweets(self, tweets: List[Tweet]):
         tweets_tokens_frequency: Dict[Tweet, List[Tuple[Token, int]]] = {}
@@ -243,13 +249,13 @@ class DBConnection:
         delete_query = "DELETE FROM token WHERE content_type = %s"
         self.cursor.execute(delete_query, (content_type,))
         self.db_connection.commit()
-        print(self.cursor.rowcount, "record(s) deleted")
+        print(self.cursor.rowcount, "content(s) deleted")
 
     def delete_tweets(self):
         # TODO delete tweet contents in cascade
         delete_query = "DELETE FROM tweet"
         self.launch_query(delete_query)
-        print(self.cursor.rowcount, "record(s) deleted")
+        print(self.cursor.rowcount, "tweet(s) deleted")
 
     def launch_query(self, query):
         self.cursor.execute(query)

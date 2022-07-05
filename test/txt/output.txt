@@ -1,0 +1,723 @@
+0 record(s) deleted
+Tweet
+	tweet raw: fyouwhat that spell ? fired up ? noo haha
+	pos tags: {"fyouwhat": "RB", "spell": "NN", "fire": "VBD", "noo": "NNS", "haha": "NN"}
+	emojis: []
+	emoticons: []
+	hashtags: ['fuckyou']
+	tokens: ['fyouwhat', 'spell', 'fired', 'noo', 'haha']
+	words frequency: {'fyouwhat': 1, 'that': 0, 'spell': 1, 'fire': 1, 'up': 0, 'noo': 1, 'haha': 1}
+
+Tweet
+	tweet raw: now all of you roll tide bandwagon fans will hop off alabama di seek . one wor d: overrated .
+	pos tags: {"roll": "VBP", "tide": "RB", "bandwagon": "NN", "fan": "NNS", "hop": "VB", "alabama": "NN", "di": "NN", "seek": "NN", "one": "CD", "wor": "NN", "overrate": "VBN"}
+	emojis: []
+	emoticons: []
+	hashtags: []
+	tokens: ['all', 'you', 'roll', 'tide', 'bandwagon', 'fans', 'hop', 'alabama', 'di', 'seek', 'one', 'wor', 'overrated']
+	words frequency: {'now': 0, 'all': 1, 'of': 0, 'you': 1, 'roll': 1, 'tide': 1, 'bandwagon': 1, 'fan': 1, 'will': 0, 'hop': 1, 'off': 0, 'alabama': 1, 'di': 1, 'seek': 1, 'one': 1, 'wor': 1, 'd': 0, 'overrate': 1}
+
+Tweet
+	tweet raw: this weeken d: tsee you football , next weeken d: marriage @ amon g . carter stadium
+	pos tags: {"weeken": "JJ", "tsee": "NN", "football": "NN", "next": "JJ", "marriage": "NN", "amon": "NN", "g": "NN", "carter": "NN", "stadium": "NN"}
+	emojis: []
+	emoticons: []
+	hashtags: []
+	tokens: ['weeken', 'tsee', 'football', 'next', 'weeken', 'marriage', 'amon', 'g', 'carter', 'stadium']
+	words frequency: {'this': 0, 'weeken': 2, 'd': 0, 'tsee': 1, 'you': 0, 'football': 1, 'next': 1, 'marriage': 1, 'amon': 1, 'g': 1, 'carter': 1, 'stadium': 1}
+
+Tweet
+	tweet raw: i wish i could go drive myself to wingstop but noo i have to stay and babysit
+	pos tags: {"wish": "VBP", "could": "MD", "go": "VB", "drive": "JJ", "wingstop": "VB", "noo": "VBP", "stay": "VB", "babysit": "VB"}
+	emojis: ['😒']
+	emoticons: []
+	hashtags: []
+	tokens: ['wish', 'could', 'go', 'drive', 'wingstop', 'noo', 'have', 'to', 'stay', 'babysit']
+	words frequency: {'i': 0, 'wish': 1, 'could': 1, 'go': 1, 'drive': 1, 'myself': 0, 'to': 1, 'wingstop': 1, 'but': 0, 'noo': 1, 'have': 1, 'stay': 1, 'and': 0, 'babysit': 1}
+
+Tweet
+	tweet raw: must rea d: gail collins on hillary next move:
+	pos tags: {"must": "MD", "rea": "VB", "gail": "NN", "collins": "NNS", "hillary": "JJ", "next": "JJ", "move": "NN"}
+	emojis: []
+	emoticons: []
+	hashtags: []
+	tokens: ['must', 'rea', 'gail', 'collins', 'hillary', 'next', 'move']
+	words frequency: {'must': 1, 'rea': 1, 'd': 0, 'gail': 1, 'collins': 1, 'on': 0, 'hillary': 1, 'next': 1, 'move': 1}
+
+Tweet
+	tweet raw: that moment you super hyped to get off work cause its saturday , then you get home and realize you have no plans for tonight .
+	pos tags: {"moment": "NN", "super": "VBP", "hype": "VBN", "get": "VBP", "work": "NN", "cause": "NN", "saturday": "NN", "home": "NN", "realize": "VB", "plan": "NNS", "tonight": "NN"}
+	emojis: ['😒']
+	emoticons: []
+	hashtags: ['smh']
+	tokens: ['moment', 'super', 'hyped', 'get', 'work', 'cause', 'saturday', 'get', 'home', 'realize', 'you', 'have', 'plans', 'tonight']
+	words frequency: {'that': 0, 'moment': 1, 'you': 1, 'super': 1, 'hype': 1, 'to': 0, 'get': 2, 'off': 0, 'work': 1, 'cause': 1, 'it': 0, 'saturday': 1, 'then': 0, 'home': 1, 'and': 0, 'realize': 1, 'have': 1, 'no': 0, 'plan': 1, 'for': 0, 'tonight': 1}
+
+Tweet
+	tweet raw: crap ! ! i thought i sent the tweet ! )x ! i was gunna say that i couldn anymore ! ! ! ! ! d; ! ! ! !
+	pos tags: {"crap": "NN", "think": "VBD", "send": "VBD", "tweet": "NN", "x": "NN", "gunna": "JJ", "say": "VBP", "anymore": "RB"}
+	emojis: []
+	emoticons: []
+	hashtags: []
+	tokens: ['crap', 'thought', 'sent', 'tweet', ')', 'x', 'was', 'gunna', 'say', 'i', 'anymore', '!', '!', '!', '!', '!']
+	words frequency: {'crap': 1, 'i': 1, 'think': 1, 'send': 1, 'the': 0, 'tweet': 1, 'x': 1, 'be': 1, 'gunna': 1, 'say': 1, 'that': 0, 'couldn': 0, 'anymore': 1, 'd': 0}
+
+Tweet
+	tweet raw: as long as i get his car ... i all goo d: d i always wanted it
+	pos tags: {"long": "RB", "get": "VBP", "car": "NN", "goo": "NN", "always": "RB", "want": "VBD"}
+	emojis: []
+	emoticons: []
+	hashtags: []
+	tokens: ['long', 'get', 'car', 'all', 'goo', 'd', 'i', 'always', 'wanted']
+	words frequency: {'a': 0, 'long': 1, 'i': 1, 'get': 1, 'his': 0, 'car': 1, 'all': 1, 'goo': 1, 'd': 1, 'always': 1, 'want': 1, 'it': 0}
+
+Tweet
+	tweet raw: headed to staples center f-word to this traffi see though
+	pos tags: {"head": "VBN", "staple": "NNS", "center": "RBR", "f-word": "NN", "traffi": "NN", "see": "VBP", "though": "IN"}
+	emojis: ['😃', '😒', '😒']
+	emoticons: []
+	hashtags: []
+	tokens: ['headed', 'staples', 'center', 'f-word', 'this', 'traffi', 'see', 'though']
+	words frequency: {'head': 1, 'to': 0, 'staple': 1, 'center': 1, 'f-word': 1, 'this': 1, 'traffi': 1, 'see': 1, 'though': 1}
+
+Tweet
+	tweet raw: bucket list item acquire d: try absinthe . that and explore a haunted mansion based on macbeth . that too .
+	pos tags: {"bucket": "NN", "list": "NN", "item": "NN", "acquire": "VB", "try": "VB", "absinthe": "NN", "explore": "VB", "haunt": "VBN", "mansion": "NN", "base": "VBN", "macbeth": "NNS"}
+	emojis: []
+	emoticons: []
+	hashtags: []
+	tokens: ['bucket', 'list', 'item', 'acquire', 'try', 'absinthe', 'and', 'explore', 'haunted', 'mansion', 'based', 'macbeth', 'too']
+	words frequency: {'bucket': 1, 'list': 1, 'item': 1, 'acquire': 1, 'd': 0, 'try': 1, 'absinthe': 1, 'that': 0, 'and': 1, 'explore': 1, 'a': 0, 'haunt': 1, 'mansion': 1, 'base': 1, 'on': 0, 'macbeth': 1, 'too': 1}
+
+Tweet
+	tweet raw: i got one sitting im my garage but its set up for drag racing
+	pos tags: {"get": "VBD", "one": "CD", "sit": "VBG", "im": "NN", "garage": "NN", "set": "NN", "drag": "NN", "racing": "NN"}
+	emojis: []
+	emoticons: [':/']
+	hashtags: []
+	tokens: ['got', 'one', 'sitting', 'im', 'garage', 'its', 'set', 'for', 'drag', 'racing']
+	words frequency: {'i': 0, 'get': 1, 'one': 1, 'sit': 1, 'im': 1, 'my': 0, 'garage': 1, 'but': 0, 'it': 1, 'set': 1, 'up': 0, 'for': 1, 'drag': 1, 'racing': 1}
+
+Tweet
+	tweet raw: watching ksl is getting me more excited for next friday ! ! so glad i go to spanish fork high ! !
+	pos tags: {"watch": "VBG", "ksl": "NN", "get": "VBG", "excited": "JJ", "next": "JJ", "friday": "NN", "glad": "JJ", "go": "VBP", "spanish": "VB", "fork": "NN", "high": "JJ"}
+	emojis: []
+	emoticons: [':)']
+	hashtags: ['cantwait', 'wegotthis']
+	tokens: ['watching', 'ksl', 'getting', 'more', 'excited', 'next', 'friday', 'glad', 'go', 'spanish', 'fork', 'high', '!', '!']
+	words frequency: {'watch': 1, 'ksl': 1, 'be': 0, 'get': 1, 'me': 0, 'more': 1, 'excited': 1, 'for': 0, 'next': 1, 'friday': 1, 'so': 0, 'glad': 1, 'i': 0, 'go': 1, 'to': 0, 'spanish': 1, 'fork': 1, 'high': 1}
+
+Tweet
+	tweet raw: has me sitting in my room in deep thought about life now
+	pos tags: {"sit": "VBG", "room": "NN", "deep": "JJ", "thought": "NN", "life": "NN"}
+	emojis: ['😕']
+	emoticons: []
+	hashtags: []
+	tokens: ['me', 'sitting', 'my', 'room', 'deep', 'thought', 'life']
+	words frequency: {'have': 0, 'me': 1, 'sit': 1, 'in': 0, 'my': 1, 'room': 1, 'deep': 1, 'thought': 1, 'about': 0, 'life': 1, 'now': 0}
+
+Tweet
+	tweet raw: hello , baby . can you come ova ? right now loneliness taking ova
+	pos tags: {"hello": "NN", "baby": "NN", "come": "VB", "ovum": "NN", "right": "RB", "loneliness": "JJ", "take": "VBG"}
+	emojis: []
+	emoticons: [':/']
+	hashtags: []
+	tokens: ['hello', 'baby', 'you', 'come', 'ova', 'right', 'loneliness', 'taking', 'ova']
+	words frequency: {'hello': 1, 'baby': 1, 'can': 0, 'you': 1, 'come': 1, 'ovum': 2, 'right': 1, 'now': 0, 'loneliness': 1, 'take': 1}
+
+Tweet
+	tweet raw: aww i didn know ! ! sorry chi seea
+	pos tags: {"aww": "NN", "know": "VBP", "sorry": "JJ", "chi": "NN", "seea": "NN"}
+	emojis: []
+	emoticons: [':/']
+	hashtags: []
+	tokens: ['aww', 'didn', 'know', '!', 'sorry', 'chi', 'seea']
+	words frequency: {'aww': 1, 'i': 0, 'didn': 1, 'know': 1, 'sorry': 1, 'chi': 1, 'seea': 1}
+
+Tweet
+	tweet raw: oh my god jamie i cried when he got in the car with me . that thoughts of what if just about killed me
+	pos tags: {"oh": "UH", "god": "JJ", "jamie": "NN", "cry": "VBD", "get": "VBD", "car": "NN", "thought": "NNS", "kill": "VBN"}
+	emojis: []
+	emoticons: [':/']
+	hashtags: []
+	tokens: ['oh', 'god', 'jamie', 'cried', 'he', 'got', 'the', 'car', 'thoughts', 'what', 'just', 'killed', 'me']
+	words frequency: {'oh': 1, 'my': 0, 'god': 1, 'jamie': 1, 'i': 0, 'cry': 1, 'when': 0, 'he': 1, 'get': 1, 'in': 0, 'the': 1, 'car': 1, 'with': 0, 'me': 1, 'that': 0, 'thought': 1, 'of': 0, 'what': 1, 'if': 0, 'just': 1, 'about': 0, 'kill': 1}
+
+Tweet
+	tweet raw: if adam sandler was really dead i was gonna smoke all night for him
+	pos tags: {"adam": "JJ", "sandler": "NN", "really": "RB", "dead": "JJ", "gon": "VBG", "na": "TO", "smoke": "VB", "night": "NN"}
+	emojis: []
+	emoticons: [':/']
+	hashtags: []
+	tokens: ['adam', 'sandler', 'really', 'dead', 'was', 'gon', 'na', 'smoke', 'night', 'him']
+	words frequency: {'if': 0, 'adam': 1, 'sandler': 1, 'be': 1, 'really': 1, 'dead': 1, 'i': 0, 'gon': 1, 'na': 1, 'smoke': 1, 'all': 0, 'night': 1, 'for': 0, 'him': 1}
+
+Tweet
+	tweet raw: really thinking about my future right now ahh fucc it &beer
+	pos tags: {"really": "RB", "think": "VBG", "future": "NN", "right": "RB", "ahh": "VBZ", "fucc": "NN", "beer": "NN"}
+	emojis: []
+	emoticons: [':/']
+	hashtags: ['barss']
+	tokens: ['really', 'thinking', 'my', 'future', 'right', 'ahh', 'fucc', 'beer']
+	words frequency: {'really': 1, 'think': 1, 'about': 0, 'my': 1, 'future': 1, 'right': 1, 'now': 0, 'ahh': 1, 'fucc': 1, 'it': 0, 'beer': 1}
+
+Tweet
+	tweet raw: damn imma get mad . im dressed up & looking ni seee too . i wish i had a saturday night date . >:/
+	pos tags: {"damn": "NN", "imma": "NN", "get": "VB", "mad": "JJ", "im": "NN", "dress": "VBD", "look": "VBG", "ni": "JJ", "seee": "NN", "wish": "JJ", "saturday": "JJ", "night": "NN", "date": "NN"}
+	emojis: []
+	emoticons: []
+	hashtags: []
+	tokens: ['damn', 'imma', 'get', 'mad', 'im', 'dressed', 'looking', 'ni', 'seee', 'wish', 'i', 'had', 'saturday', 'night', 'date', '>', '/']
+	words frequency: {'damn': 1, 'imma': 1, 'get': 1, 'mad': 1, 'im': 1, 'dress': 1, 'up': 0, 'look': 1, 'ni': 1, 'seee': 1, 'too': 0, 'i': 1, 'wish': 1, 'have': 1, 'a': 0, 'saturday': 1, 'night': 1, 'date': 1}
+
+Tweet
+	tweet raw: can anyone see the baby . ? @ mi nena
+	pos tags: {"anyone": "NN", "see": "VB", "baby": "NN", "mi": "NN", "nena": "NN"}
+	emojis: []
+	emoticons: [':/']
+	hashtags: []
+	tokens: ['anyone', 'see', 'baby', '?', 'mi', 'nena']
+	words frequency: {'can': 0, 'anyone': 1, 'see': 1, 'the': 0, 'baby': 1, 'mi': 1, 'nena': 1}
+
+Tweet
+	tweet raw: now all of you roll tide bandwagon fans will hop off alabama di seek . one wor d: overrated .
+	pos tags: {"roll": "VBP", "tide": "RB", "bandwagon": "NN", "fan": "NNS", "hop": "VB", "alabama": "NN", "di": "NN", "seek": "NN", "one": "CD", "wor": "NN", "overrate": "VBN"}
+	emojis: []
+	emoticons: []
+	hashtags: []
+	tokens: ['all', 'you', 'roll', 'tide', 'bandwagon', 'fans', 'hop', 'alabama', 'di', 'seek', 'one', 'wor', 'overrated']
+	words frequency: {'now': 0, 'all': 1, 'of': 0, 'you': 1, 'roll': 1, 'tide': 1, 'bandwagon': 1, 'fan': 1, 'will': 0, 'hop': 1, 'off': 0, 'alabama': 1, 'di': 1, 'seek': 1, 'one': 1, 'wor': 1, 'd': 0, 'overrate': 1}
+
+Tweet
+	tweet raw: dear mtv , get rihanna off the top 100 sexiest videos of all time . she has a pierce lip and white chi seek hair .
+	pos tags: {"dear": "JJ", "mtv": "NN", "get": "VB", "rihanna": "VBN", "top": "JJ", "100": "CD", "sexy": "JJS", "video": "NN", "time": "NN", "pierce": "NN", "lip": "NN", "white": "JJ", "chi": "NN", "seek": "JJ", "hair": "NN"}
+	emojis: []
+	emoticons: []
+	hashtags: ['notsexy', 'eww']
+	tokens: ['dear', 'mtv', 'get', 'rihanna', 'the', 'top', '100', 'sexiest', 'videos', 'all', 'time', 'has', 'pierce', 'lip', 'white', 'chi', 'seek', 'hair']
+	words frequency: {'dear': 1, 'mtv': 1, 'get': 1, 'rihanna': 1, 'off': 0, 'the': 1, 'top': 1, '100': 1, 'sexy': 1, 'video': 1, 'of': 0, 'all': 1, 'time': 1, 'she': 0, 'have': 1, 'a': 0, 'pierce': 1, 'lip': 1, 'and': 0, 'white': 1, 'chi': 1, 'seek': 1, 'hair': 1}
+
+Tweet
+	tweet raw: this weeken d: tsee you football , next weeken d: marriage @ amon g . carter stadium
+	pos tags: {"weeken": "JJ", "tsee": "NN", "football": "NN", "next": "JJ", "marriage": "NN", "amon": "NN", "g": "NN", "carter": "NN", "stadium": "NN"}
+	emojis: []
+	emoticons: []
+	hashtags: []
+	tokens: ['weeken', 'tsee', 'football', 'next', 'weeken', 'marriage', 'amon', 'g', 'carter', 'stadium']
+	words frequency: {'this': 0, 'weeken': 2, 'd': 0, 'tsee': 1, 'you': 0, 'football': 1, 'next': 1, 'marriage': 1, 'amon': 1, 'g': 1, 'carter': 1, 'stadium': 1}
+
+Tweet
+	tweet raw: oops ! ! ! tehe ! # @ atlanta , ga
+	pos tags: {"oops": "NNS", "tehe": "NN", "atlanta": "NN", "ga": "NN"}
+	emojis: []
+	emoticons: []
+	hashtags: ['bored', 'life', 'fun', 'smh', 'smile', 'followme', 'face', 'woot', 'work', 'atlanta', 'swag', 'vest']
+	tokens: ['oops', 'tehe', '!', '#', 'atlanta', 'ga']
+	words frequency: {'oops': 1, 'tehe': 1, 'atlanta': 1, 'ga': 1}
+
+Tweet
+	tweet raw: who wants to go to the rihanna concert with and i ? a$ap is coming too
+	pos tags: {"want": "VBZ", "go": "VB", "rihanna": "NN", "concert": "NN", "ap": "NN", "come": "VBG"}
+	emojis: ['😏']
+	emoticons: []
+	hashtags: []
+	tokens: ['wants', 'go', 'the', 'rihanna', 'concert', 'and', 'a', 'ap', 'coming']
+	words frequency: {'who': 0, 'want': 1, 'to': 0, 'go': 1, 'the': 1, 'rihanna': 1, 'concert': 1, 'with': 0, 'and': 1, 'i': 0, 'a': 1, 'ap': 1, 'be': 0, 'come': 1, 'too': 0}
+
+Tweet
+	tweet raw: i wish i could go drive myself to wingstop but noo i have to stay and babysit
+	pos tags: {"wish": "VBP", "could": "MD", "go": "VB", "drive": "JJ", "wingstop": "VB", "noo": "VBP", "stay": "VB", "babysit": "VB"}
+	emojis: ['😒']
+	emoticons: []
+	hashtags: []
+	tokens: ['wish', 'could', 'go', 'drive', 'wingstop', 'noo', 'have', 'to', 'stay', 'babysit']
+	words frequency: {'i': 0, 'wish': 1, 'could': 1, 'go': 1, 'drive': 1, 'myself': 0, 'to': 1, 'wingstop': 1, 'but': 0, 'noo': 1, 'have': 1, 'stay': 1, 'and': 0, 'babysit': 1}
+
+Tweet
+	tweet raw: very interesting conversation going on now i feel like i’m a fly in a wall in a gin real lifes bathroom or something
+	pos tags: {"interesting": "JJ", "conversation": "NN", "go": "VBG", "feel": "VBP", "like": "IN", "\u2019": "VBP", "fly": "NN", "wall": "NN", "gin": "NN", "real": "JJ", "life": "NN", "bathroom": "NN", "something": "NN"}
+	emojis: ['😐']
+	emoticons: []
+	hashtags: ['girltalk', 'uhh']
+	tokens: ['interesting', 'conversation', 'going', 'now', 'feel', 'like', '’', 'a', 'fly', 'a', 'wall', 'a', 'gin', 'real', 'lifes', 'bathroom', 'something']
+	words frequency: {'very': 0, 'interesting': 1, 'conversation': 1, 'go': 1, 'on': 0, 'now': 1, 'i': 0, 'feel': 1, 'like': 1, '’': 1, 'm': 0, 'a': 3, 'fly': 1, 'in': 0, 'wall': 1, 'gin': 1, 'real': 1, 'life': 1, 'bathroom': 1, 'or': 0, 'something': 1}
+
+Tweet
+	tweet raw: common reaction when david ash is playing qb @ darrell k royal texas memorial stadium
+	pos tags: {"common": "JJ", "reaction": "NN", "david": "NN", "ash": "NN", "play": "VBG", "qb": "JJ", "darrell": "NN", "k": "NN", "royal": "VBP", "texas": "JJ", "memorial": "JJ", "stadium": "NN"}
+	emojis: ['😑']
+	emoticons: []
+	hashtags: ['texas', 'ashsucks', 'ri']
+	tokens: ['common', 'reaction', 'david', 'ash', 'playing', 'qb', 'darrell', 'k', 'royal', 'texas', 'memorial', 'stadium']
+	words frequency: {'common': 1, 'reaction': 1, 'when': 0, 'david': 1, 'ash': 1, 'be': 0, 'play': 1, 'qb': 1, 'darrell': 1, 'k': 1, 'royal': 1, 'texas': 1, 'memorial': 1, 'stadium': 1}
+
+Tweet
+	tweet raw: must rea d: gail collins on hillary next move:
+	pos tags: {"must": "MD", "rea": "VB", "gail": "NN", "collins": "NNS", "hillary": "JJ", "next": "JJ", "move": "NN"}
+	emojis: []
+	emoticons: []
+	hashtags: []
+	tokens: ['must', 'rea', 'gail', 'collins', 'hillary', 'next', 'move']
+	words frequency: {'must': 1, 'rea': 1, 'd': 0, 'gail': 1, 'collins': 1, 'on': 0, 'hillary': 1, 'next': 1, 'move': 1}
+
+Tweet
+	tweet raw: that moment you super hyped to get off work cause its saturday , then you get home and realize you have no plans for tonight .
+	pos tags: {"moment": "NN", "super": "VBP", "hype": "VBN", "get": "VBP", "work": "NN", "cause": "NN", "saturday": "NN", "home": "NN", "realize": "VB", "plan": "NNS", "tonight": "NN"}
+	emojis: ['😒']
+	emoticons: []
+	hashtags: ['smh']
+	tokens: ['moment', 'super', 'hyped', 'get', 'work', 'cause', 'saturday', 'get', 'home', 'realize', 'you', 'have', 'plans', 'tonight']
+	words frequency: {'that': 0, 'moment': 1, 'you': 1, 'super': 1, 'hype': 1, 'to': 0, 'get': 2, 'off': 0, 'work': 1, 'cause': 1, 'it': 0, 'saturday': 1, 'then': 0, 'home': 1, 'and': 0, 'realize': 1, 'have': 1, 'no': 0, 'plan': 1, 'for': 0, 'tonight': 1}
+
+Tweet
+	tweet raw: after taylor kept throwing the ball into the gutter she gets a strike ... ? whatt ?
+	pos tags: {"taylor": "NN", "keep": "VBD", "throw": "VBG", "ball": "NN", "gutter": "NN", "get": "VBZ", "strike": "NN", "whatt": "NN"}
+	emojis: ['😳', '😜']
+	emoticons: []
+	hashtags: []
+	tokens: ['taylor', 'kept', 'throwing', 'ball', 'the', 'gutter', 'gets', 'strike', 'whatt', '?']
+	words frequency: {'after': 0, 'taylor': 1, 'keep': 1, 'throw': 1, 'the': 1, 'ball': 1, 'into': 0, 'gutter': 1, 'she': 0, 'get': 1, 'a': 0, 'strike': 1, 'whatt': 1}
+
+Tweet
+	tweet raw: i got one sitting im my garage but its set up for drag racing
+	pos tags: {"get": "VBD", "one": "CD", "sit": "VBG", "im": "NN", "garage": "NN", "set": "NN", "drag": "NN", "racing": "NN"}
+	emojis: []
+	emoticons: [':/']
+	hashtags: []
+	tokens: ['got', 'one', 'sitting', 'im', 'garage', 'its', 'set', 'for', 'drag', 'racing']
+	words frequency: {'i': 0, 'get': 1, 'one': 1, 'sit': 1, 'im': 1, 'my': 0, 'garage': 1, 'but': 0, 'it': 1, 'set': 1, 'up': 0, 'for': 1, 'drag': 1, 'racing': 1}
+
+Tweet
+	tweet raw: oh my goodness ! hahaha perfect and yes i do see this happening
+	pos tags: {"oh": "UH", "goodness": "NN", "hahaha": "NN", "perfect": "JJ", "yes": "NNS", "see": "VB", "happen": "VBG"}
+	emojis: ['😊']
+	emoticons: []
+	hashtags: []
+	tokens: ['oh', 'goodness', 'hahaha', 'perfect', 'yes', 'do', 'see', 'happening']
+	words frequency: {'oh': 1, 'my': 0, 'goodness': 1, 'hahaha': 1, 'perfect': 1, 'and': 0, 'yes': 1, 'i': 0, 'do': 1, 'see': 1, 'this': 0, 'happen': 1}
+
+Tweet
+	tweet raw: as long as you love me
+	pos tags: {"long": "RB", "love": "VBP"}
+	emojis: ['💙', '😊', '👌', '😘']
+	emoticons: []
+	hashtags: []
+	tokens: ['long', 'you', 'love']
+	words frequency: {'a': 0, 'long': 1, 'you': 1, 'love': 1, 'me': 0}
+
+Tweet
+	tweet raw: you like boyce avenue ? ! ? !
+	pos tags: {"like": "VBP", "boyce": "VB", "avenue": "NN"}
+	emojis: ['😱']
+	emoticons: []
+	hashtags: []
+	tokens: ['like', 'boyce', 'avenue', '!', '!']
+	words frequency: {'you': 0, 'like': 1, 'boyce': 1, 'avenue': 1}
+
+Tweet
+	tweet raw: it took me awhile to realize that i don need a guy or anyone , all i néed is to push myself everyday to get where i wanna be in life
+	pos tags: {"take": "VBD", "awhile": "JJ", "realize": "VB", "need": "VBP", "guy": "NN", "anyone": "NN", "n\u00e9ed": "NN", "push": "VB", "everyday": "JJ", "get": "VB", "wan": "NN", "na": "RB", "life": "NN"}
+	emojis: ['😊', '👍', '👌', '👊', '💢', '💢', '💢']
+	emoticons: []
+	hashtags: []
+	tokens: ['took', 'awhile', 'realize', 'i', 'need', 'guy', 'anyone', 'i', 'néed', 'push', 'everyday', 'to', 'get', 'i', 'wan', 'na', 'in', 'life']
+	words frequency: {'it': 0, 'take': 1, 'me': 0, 'awhile': 1, 'to': 1, 'realize': 1, 'that': 0, 'i': 3, 'don': 0, 'need': 1, 'a': 0, 'guy': 1, 'or': 0, 'anyone': 1, 'all': 0, 'néed': 1, 'be': 0, 'push': 1, 'myself': 0, 'everyday': 1, 'get': 1, 'where': 0, 'wan': 1, 'na': 1, 'in': 1, 'life': 1}
+
+Tweet
+	tweet raw: my manager told me i should give reno a chance 😶
+	pos tags: {"manager": "NN", "tell": "VBD", "give": "VB", "reno": "VB", "chance": "NN", "\ud83d\ude36": "NN"}
+	emojis: []
+	emoticons: []
+	hashtags: []
+	tokens: ['manager', 'told', 'i', 'give', 'reno', 'chance', '😶']
+	words frequency: {'my': 0, 'manager': 1, 'tell': 1, 'me': 0, 'i': 1, 'should': 0, 'give': 1, 'reno': 1, 'a': 0, 'chance': 1, '😶': 1}
+
+Tweet
+	tweet raw: hello , baby . can you come ova ? right now loneliness taking ova
+	pos tags: {"hello": "NN", "baby": "NN", "come": "VB", "ovum": "NN", "right": "RB", "loneliness": "JJ", "take": "VBG"}
+	emojis: []
+	emoticons: [':/']
+	hashtags: []
+	tokens: ['hello', 'baby', 'you', 'come', 'ova', 'right', 'loneliness', 'taking', 'ova']
+	words frequency: {'hello': 1, 'baby': 1, 'can': 0, 'you': 1, 'come': 1, 'ovum': 2, 'right': 1, 'now': 0, 'loneliness': 1, 'take': 1}
+
+Tweet
+	tweet raw: aww i didn know ! ! sorry chi seea
+	pos tags: {"aww": "NN", "know": "VBP", "sorry": "JJ", "chi": "NN", "seea": "NN"}
+	emojis: []
+	emoticons: [':/']
+	hashtags: []
+	tokens: ['aww', 'didn', 'know', '!', 'sorry', 'chi', 'seea']
+	words frequency: {'aww': 1, 'i': 0, 'didn': 1, 'know': 1, 'sorry': 1, 'chi': 1, 'seea': 1}
+
+Tweet
+	tweet raw: my yoga pants fit better . i be ready for a medium soon enough .
+	pos tags: {"yoga": "JJ", "pant": "NNS", "fit": "VBP", "good": "JJR", "ready": "JJ", "medium": "NN", "soon": "RB", "enough": "RB"}
+	emojis: ['😊']
+	emoticons: []
+	hashtags: []
+	tokens: ['yoga', 'pants', 'fit', 'better', 'be', 'ready', 'a', 'medium', 'soon', 'enough']
+	words frequency: {'my': 0, 'yoga': 1, 'pant': 1, 'fit': 1, 'good': 1, 'i': 0, 'be': 1, 'ready': 1, 'for': 0, 'a': 1, 'medium': 1, 'soon': 1, 'enough': 1}
+
+Tweet
+	tweet raw: gin real lifel , you know me . i don turn down shots :d
+	pos tags: {"gin": "NN", "real": "JJ", "lifel": "NN", "know": "VBP", "turn": "VBP", "shot": "NNS"}
+	emojis: []
+	emoticons: []
+	hashtags: []
+	tokens: ['gin', 'real', 'lifel', 'know', 'i', 'turn', 'shots']
+	words frequency: {'gin': 1, 'real': 1, 'lifel': 1, 'you': 0, 'know': 1, 'me': 0, 'i': 1, 'don': 0, 'turn': 1, 'down': 0, 'shot': 1, 'd': 0}
+
+Tweet
+	tweet raw: after taylor kept throwing the ball into the gutter she gets a strike ... ? whatt ?
+	pos tags: {"taylor": "NN", "keep": "VBD", "throw": "VBG", "ball": "NN", "gutter": "NN", "get": "VBZ", "strike": "NN", "whatt": "NN"}
+	emojis: ['😳', '😜']
+	emoticons: []
+	hashtags: []
+	tokens: ['taylor', 'kept', 'throwing', 'ball', 'the', 'gutter', 'gets', 'strike', 'whatt', '?']
+	words frequency: {'after': 0, 'taylor': 1, 'keep': 1, 'throw': 1, 'the': 1, 'ball': 1, 'into': 0, 'gutter': 1, 'she': 0, 'get': 1, 'a': 0, 'strike': 1, 'whatt': 1}
+
+Tweet
+	tweet raw: im goin to my granny house i aint gone make it back till 4 0 in the morning that friday but i tryna find a way
+	pos tags: {"im": "NN", "goin": "NN", "granny": "JJ", "house": "NN", "aint": "VBP", "go": "VBN", "make": "VBP", "back": "RB", "till": "VBZ", "4": "CD", "0": "CD", "morning": "NN", "friday": "NN", "tryna": "VBP", "find": "VBP", "way": "NN"}
+	emojis: []
+	emoticons: [':3']
+	hashtags: []
+	tokens: ['im', 'goin', 'my', 'granny', 'house', 'aint', 'gone', 'make', 'back', 'till', '4', '0', 'the', 'morning', 'friday', 'i', 'tryna', 'find', 'way']
+	words frequency: {'im': 1, 'goin': 1, 'to': 0, 'my': 1, 'granny': 1, 'house': 1, 'i': 1, 'aint': 1, 'go': 1, 'make': 1, 'it': 0, 'back': 1, 'till': 1, '4': 1, '0': 1, 'in': 0, 'the': 1, 'morning': 1, 'that': 0, 'friday': 1, 'but': 0, 'tryna': 1, 'find': 1, 'a': 0, 'way': 1}
+
+Tweet
+	tweet raw: watching ksl is getting me more excited for next friday ! ! so glad i go to spanish fork high ! !
+	pos tags: {"watch": "VBG", "ksl": "NN", "get": "VBG", "excited": "JJ", "next": "JJ", "friday": "NN", "glad": "JJ", "go": "VBP", "spanish": "VB", "fork": "NN", "high": "JJ"}
+	emojis: []
+	emoticons: [':)']
+	hashtags: ['cantwait', 'wegotthis']
+	tokens: ['watching', 'ksl', 'getting', 'more', 'excited', 'next', 'friday', 'glad', 'go', 'spanish', 'fork', 'high', '!', '!']
+	words frequency: {'watch': 1, 'ksl': 1, 'be': 0, 'get': 1, 'me': 0, 'more': 1, 'excited': 1, 'for': 0, 'next': 1, 'friday': 1, 'so': 0, 'glad': 1, 'i': 0, 'go': 1, 'to': 0, 'spanish': 1, 'fork': 1, 'high': 1}
+
+Tweet
+	tweet raw: she thought it was a problem to hold hands .. what i look like ..
+	pos tags: {"think": "VBD", "problem": "NN", "hold": "VB", "hand": "NNS", "look": "VBP", "like": "IN"}
+	emojis: []
+	emoticons: [':)']
+	hashtags: []
+	tokens: ['thought', 'was', 'problem', 'hold', 'hands', 'i', 'look', 'like']
+	words frequency: {'she': 0, 'think': 1, 'it': 0, 'be': 1, 'a': 0, 'problem': 1, 'to': 0, 'hold': 1, 'hand': 1, 'what': 0, 'i': 1, 'look': 1, 'like': 1}
+
+Tweet
+	tweet raw: the only thing i give those ring gin real lifes credit for is their ability to walk in high heels .
+	pos tags: {"thing": "NN", "give": "VBP", "ring": "VBG", "gin": "JJ", "real": "JJ", "life": "NN", "credit": "NN", "ability": "NN", "walk": "VB", "high": "JJ", "heel": "NNS"}
+	emojis: ['😂', '😂', '😂', '😂', '😂']
+	emoticons: []
+	hashtags: []
+	tokens: ['only', 'thing', 'give', 'ring', 'gin', 'real', 'lifes', 'credit', 'is', 'ability', 'walk', 'high', 'heels']
+	words frequency: {'the': 0, 'only': 1, 'thing': 1, 'i': 0, 'give': 1, 'those': 0, 'ring': 1, 'gin': 1, 'real': 1, 'life': 1, 'credit': 1, 'for': 0, 'be': 1, 'their': 0, 'ability': 1, 'to': 0, 'walk': 1, 'in': 0, 'high': 1, 'heel': 1}
+
+Tweet
+	tweet raw: amber said what your #. so she can text u
+	pos tags: {"amber": "NN", "say": "VBD", "text": "VB", "u": "JJ"}
+	emojis: []
+	emoticons: [':)']
+	hashtags: []
+	tokens: ['amber', 'said', 'your', '.', 'she', 'text', 'u']
+	words frequency: {'amber': 1, 'say': 1, 'what': 0, 'your': 1, 'so': 0, 'she': 1, 'can': 0, 'text': 1, 'u': 1}
+
+Tweet
+	tweet raw: ifyouwere in pv and not carson , i would
+	pos tags: {"ifyouwere": "RB", "pv": "NN", "carson": "NN", "would": "MD"}
+	emojis: []
+	emoticons: [':)']
+	hashtags: []
+	tokens: ['ifyouwere', 'pv', 'not', 'carson', 'would']
+	words frequency: {'ifyouwere': 1, 'in': 0, 'pv': 1, 'and': 0, 'not': 1, 'carson': 1, 'i': 0, 'would': 1}
+
+Tweet
+	tweet raw: , aww that last retweet madee mee smilee i lovee alexiss morree
+	pos tags: {"aww": "VBZ", "last": "JJ", "retweet": "NN", "madee": "VBD", "mee": "JJ", "smilee": "NN", "lovee": "VBP", "alexiss": "JJ", "morree": "NN"}
+	emojis: []
+	emoticons: ['=)']
+	hashtags: []
+	tokens: ['aww', 'last', 'retweet', 'madee', 'mee', 'smilee', 'lovee', 'alexiss', 'morree']
+	words frequency: {'aww': 1, 'that': 0, 'last': 1, 'retweet': 1, 'madee': 1, 'mee': 1, 'smilee': 1, 'i': 0, 'lovee': 1, 'alexiss': 1, 'morree': 1}
+
+Tweet
+	tweet raw: checking out the new drb colony . it very spacious and has free parking (@ the drb w/
+	pos tags: {"check": "VBG", "new": "JJ", "drb": "NN", "colony": "NN", "spacious": "JJ", "free": "JJ", "parking": "NN", "w/": "NN"}
+	emojis: []
+	emoticons: [':)']
+	hashtags: []
+	tokens: ['checking', 'new', 'drb', 'colony', 'very', 'spacious', 'has', 'free', 'parking', '@', 'the', 'drb', 'w/']
+	words frequency: {'check': 1, 'out': 0, 'the': 1, 'new': 1, 'drb': 2, 'colony': 1, 'it': 0, 'very': 1, 'spacious': 1, 'and': 0, 'have': 1, 'free': 1, 'parking': 1, 'w/': 1}
+
+Tweet
+	tweet raw: randomly got really hot ?
+	pos tags: {"randomly": "RB", "get": "VBD", "really": "RB", "hot": "JJ"}
+	emojis: ['😥', '😉']
+	emoticons: []
+	hashtags: ['sotakeoffallyourclothes', 'noimalady', 'unlessitsgirlsnight']
+	tokens: ['randomly', 'got', 'really', 'hot']
+	words frequency: {'randomly': 1, 'get': 1, 'really': 1, 'hot': 1}
+
+Tweet
+	tweet raw: i just wish i had more of a social life
+	pos tags: {"wish": "JJ", "social": "JJ", "life": "NN"}
+	emojis: ['😥']
+	emoticons: []
+	hashtags: []
+	tokens: ['just', 'wish', 'had', 'of', 'social', 'life']
+	words frequency: {'i': 0, 'just': 1, 'wish': 1, 'have': 1, 'more': 0, 'of': 1, 'a': 0, 'social': 1, 'life': 1}
+
+Tweet
+	tweet raw: i just want some wine to celebrate !
+	pos tags: {"want": "VB", "wine": "NN", "celebrate": "VB"}
+	emojis: ['😞']
+	emoticons: []
+	hashtags: []
+	tokens: ['just', 'want', 'wine', 'celebrate']
+	words frequency: {'i': 0, 'just': 1, 'want': 1, 'some': 0, 'wine': 1, 'to': 0, 'celebrate': 1}
+
+Tweet
+	tweet raw: i trying to change my baby ringtone but i can seem to find a song that suits him .
+	pos tags: {"try": "VBG", "change": "VB", "baby": "NN", "ringtone": "NN", "seem": "VB", "find": "VB", "song": "NN", "suit": "NNS"}
+	emojis: []
+	emoticons: [':-(']
+	hashtags: []
+	tokens: ['trying', 'change', 'baby', 'ringtone', 'i', 'seem', 'find', 'song', 'suits']
+	words frequency: {'i': 1, 'try': 1, 'to': 0, 'change': 1, 'my': 0, 'baby': 1, 'ringtone': 1, 'but': 0, 'can': 0, 'seem': 1, 'find': 1, 'a': 0, 'song': 1, 'that': 0, 'suit': 1, 'him': 0}
+
+Tweet
+	tweet raw: sitting thinking about my life what i done wrong and what i done right . sigh i hope i doing things right now .
+	pos tags: {"sit": "VBG", "think": "VBG", "life": "NN", "wrong": "JJ", "right": "RB", "sigh": "JJ", "hope": "VBP", "thing": "NNS"}
+	emojis: ['😔', '😪']
+	emoticons: []
+	hashtags: []
+	tokens: ['sitting', 'thinking', 'my', 'life', 'done', 'wrong', 'what', 'done', 'right', 'sigh', 'hope', 'i', 'doing', 'things', 'right']
+	words frequency: {'sit': 1, 'think': 1, 'about': 0, 'my': 1, 'life': 1, 'what': 1, 'i': 1, 'do': 1, 'wrong': 1, 'and': 0, 'right': 2, 'sigh': 1, 'hope': 1, 'thing': 1, 'now': 0}
+
+Tweet
+	tweet raw: this is awkward why are these chinese people doing karaoke an in chinese .... i embarrassed ....
+	pos tags: {"awkward": "JJ", "chinese": "JJ", "people": "NNS", "karaoke": "VBD", "embarrass": "VBD"}
+	emojis: ['😔']
+	emoticons: []
+	hashtags: []
+	tokens: ['is', 'awkward', 'are', 'chinese', 'people', 'karaoke', 'in', 'chinese', 'embarrassed']
+	words frequency: {'this': 0, 'be': 1, 'awkward': 1, 'why': 0, 'these': 0, 'chinese': 2, 'people': 1, 'do': 0, 'karaoke': 1, 'an': 0, 'in': 1, 'i': 0, 'embarrass': 1}
+
+Tweet
+	tweet raw: the depression from the score is starting to set in
+	pos tags: {"depression": "NN", "score": "NN", "start": "VBG", "set": "VB"}
+	emojis: ['😭']
+	emoticons: []
+	hashtags: []
+	tokens: ['depression', 'the', 'score', 'starting', 'set']
+	words frequency: {'the': 1, 'depression': 1, 'from': 0, 'score': 1, 'be': 0, 'start': 1, 'to': 0, 'set': 1, 'in': 0}
+
+Tweet
+	tweet raw: at home i don have a way out there
+	pos tags: {"home": "NN", "way": "NN"}
+	emojis: []
+	emoticons: [':(']
+	hashtags: []
+	tokens: ['home', 'don', 'a', 'way', 'there']
+	words frequency: {'at': 0, 'home': 1, 'i': 0, 'don': 1, 'have': 0, 'a': 1, 'way': 1, 'out': 0, 'there': 1}
+
+Tweet
+	tweet raw: what ? it looks gold . so much for the joke
+	pos tags: {"look": "VBZ", "gold": "NN", "much": "JJ", "joke": "NN"}
+	emojis: []
+	emoticons: [':(']
+	hashtags: []
+	tokens: ['it', 'looks', 'gold', 'much', 'the', 'joke']
+	words frequency: {'what': 0, 'it': 1, 'look': 1, 'gold': 1, 'so': 0, 'much': 1, 'for': 0, 'the': 1, 'joke': 1}
+
+Tweet
+	tweet raw: why won they let me get an x-ray until monday
+	pos tags: {"win": "VBD", "let": "VB", "get": "VB", "x-ray": "NN", "monday": "NN"}
+	emojis: ['😭']
+	emoticons: []
+	hashtags: []
+	tokens: ['won', 'let', 'get', 'x-ray', 'monday']
+	words frequency: {'why': 0, 'win': 1, 'they': 0, 'let': 1, 'me': 0, 'get': 1, 'an': 0, 'x-ray': 1, 'until': 0, 'monday': 1}
+
+Tweet
+	tweet raw: i asked my mama if she wanted a beer & she responded as if i just offered her some drugs
+	pos tags: {"ask": "VBD", "mama": "NN", "want": "VBD", "beer": "NN", "respond": "VBD", "offer": "VBD", "drug": "NNS"}
+	emojis: []
+	emoticons: ['o.o']
+	hashtags: []
+	tokens: ['asked', 'mama', 'wanted', 'beer', 'she', 'responded', 'if', 'just', 'offered', 'some', 'drugs']
+	words frequency: {'i': 0, 'ask': 1, 'my': 0, 'mama': 1, 'if': 1, 'she': 1, 'want': 1, 'a': 0, 'beer': 1, 'respond': 1, 'just': 1, 'offer': 1, 'her': 0, 'some': 1, 'drug': 1}
+
+Tweet
+	tweet raw: :o hour wait ! (@ grand lux café w/ 8 others)
+	pos tags: {"hour": "NN", "wait": "NN", "grand": "JJ", "lux": "NN", "caf\u00e9": "NN", "w/": "VBD", "8": "CD", "others": "NNS"}
+	emojis: []
+	emoticons: []
+	hashtags: []
+	tokens: ['hour', 'wait', '(', 'grand', 'lux', 'café', 'w/', '8', 'others']
+	words frequency: {'o': 0, 'hour': 1, 'wait': 1, 'grand': 1, 'lux': 1, 'café': 1, 'w/': 1, '8': 1, 'others': 1}
+
+Tweet
+	tweet raw: a homeless guy scared the fuck out of me :o
+	pos tags: {"homeless": "NN", "guy": "NN", "scar": "VBD", "fuck": "NN"}
+	emojis: []
+	emoticons: []
+	hashtags: []
+	tokens: ['homeless', 'guy', 'scared', 'fuck', 'of', 'o']
+	words frequency: {'a': 0, 'homeless': 1, 'guy': 1, 'scar': 1, 'the': 0, 'fuck': 1, 'out': 0, 'of': 1, 'me': 0, 'o': 1}
+
+Tweet
+	tweet raw: how much longer you work ? :o pretty good just watching movies
+	pos tags: {"much": "RB", "longer": "RBR", "work": "VB", "pretty": "RB", "good": "JJ", "watch": "VBG", "movie": "NNS"}
+	emojis: []
+	emoticons: [':)']
+	hashtags: []
+	tokens: ['much', 'longer', 'work', ':', 'pretty', 'good', 'watching', 'movies']
+	words frequency: {'how': 0, 'much': 1, 'longer': 1, 'you': 0, 'work': 1, 'o': 0, 'pretty': 1, 'good': 1, 'just': 0, 'watch': 1, 'movie': 1}
+
+Tweet
+	tweet raw: you going to go tomorrow ? why not today ? :o
+	pos tags: {"go": "VB", "tomorrow": "NN", "today": "NN"}
+	emojis: []
+	emoticons: []
+	hashtags: []
+	tokens: ['going', 'go', 'tomorrow', 'not', 'today', ':']
+	words frequency: {'you': 0, 'go': 1, 'to': 0, 'tomorrow': 1, 'why': 0, 'not': 1, 'today': 1, 'o': 0}
+
+Tweet
+	tweet raw: zamm , im confused who 9.12.12 then im glued
+	pos tags: {"zamm": "NN", "im": "VB", "confuse": "VBD", "9.12.12": "CD", "glued": "NN"}
+	emojis: []
+	emoticons: ['o.o']
+	hashtags: []
+	tokens: ['zamm', 'im', 'confused', '9.12.12', 'im', 'glued']
+	words frequency: {'zamm': 1, 'im': 2, 'confuse': 1, 'who': 0, '9.12.12': 1, 'then': 0, 'glued': 1}
+
+Tweet
+	tweet raw: <-- this is my oh shit i forgot about new years face <-- this is my after new years face
+	pos tags: {"oh": "JJ", "shit": "NN", "forget": "VBD", "new": "JJ", "year": "NNS", "face": "VBP"}
+	emojis: ['😧', '😵']
+	emoticons: []
+	hashtags: ['2013bitches']
+	tokens: ['--', 'is', 'oh', 'shit', 'forgot', 'new', 'years', 'face', '--', 'is', 'after', 'new', 'years', 'face']
+	words frequency: {'this': 0, 'be': 2, 'my': 0, 'oh': 1, 'shit': 1, 'i': 0, 'forget': 1, 'about': 0, 'new': 2, 'year': 2, 'face': 2, 'after': 1}
+
+Tweet
+	tweet raw: gotta get up at 6 tomorrow so good night my tweethearts :o
+	pos tags: {"get": "VB", "ta": "NNS", "6": "CD", "tomorrow": "NN", "good": "JJ", "night": "NN", "tweethearts": "NNS"}
+	emojis: []
+	emoticons: []
+	hashtags: []
+	tokens: ['got', 'ta', 'get', 'at', '6', 'tomorrow', 'good', 'night', 'tweethearts']
+	words frequency: {'get': 1, 'ta': 1, 'up': 0, 'at': 1, '6': 1, 'tomorrow': 1, 'so': 0, 'good': 1, 'night': 1, 'my': 0, 'tweethearts': 1, 'o': 0}
+
+Tweet
+	tweet raw: random guy just complimented me on my muscle tone
+	pos tags: {"random": "JJ", "guy": "NN", "compliment": "VBN", "muscle": "NN", "tone": "NN"}
+	emojis: []
+	emoticons: []
+	hashtags: ['weird', 'butthanks']
+	tokens: ['random', 'guy', 'complimented', 'on', 'muscle', 'tone']
+	words frequency: {'random': 1, 'guy': 1, 'just': 0, 'compliment': 1, 'me': 0, 'on': 1, 'my': 0, 'muscle': 1, 'tone': 1}
+
+Tweet
+	tweet raw: ok yur telling me yur nose itch . sratch it or get some tissue stop telling me the things yu say
+	pos tags: {"ok": "JJ", "yur": "JJ", "tell": "VBG", "nose": "JJ", "itch": "NN", "sratch": "VB", "get": "VB", "tissue": "NN", "stop": "NN", "thing": "NNS", "yu": "NNS", "say": "VBP"}
+	emojis: []
+	emoticons: []
+	hashtags: ['random']
+	tokens: ['ok', 'yur', 'telling', 'yur', 'nose', 'itch', 'sratch', 'or', 'get', 'tissue', 'stop', 'telling', 'the', 'things', 'yu', 'say']
+	words frequency: {'ok': 1, 'yur': 2, 'tell': 2, 'me': 0, 'nose': 1, 'itch': 1, 'sratch': 1, 'it': 0, 'or': 1, 'get': 1, 'some': 0, 'tissue': 1, 'stop': 1, 'the': 1, 'thing': 1, 'yu': 1, 'say': 1}
+
+Tweet
+	tweet raw: randomly got really hot ?
+	pos tags: {"randomly": "RB", "get": "VBD", "really": "RB", "hot": "JJ"}
+	emojis: ['😥', '😉']
+	emoticons: []
+	hashtags: ['sotakeoffallyourclothes', 'noimalady', 'unlessitsgirlsnight']
+	tokens: ['randomly', 'got', 'really', 'hot']
+	words frequency: {'randomly': 1, 'get': 1, 'really': 1, 'hot': 1}
+
+Tweet
+	tweet raw: i love my baby with all my heart ! your the best . i wont ever leave your side i promise . 092312 forever .
+	pos tags: {"love": "VBP", "baby": "NN", "heart": "NN", "best": "JJS", "wont": "VBP", "ever": "RB", "leave": "VBP", "side": "NN", "promise": "NN", "092312": "CD", "forever": "RB"}
+	emojis: []
+	emoticons: ['<3', '<3']
+	hashtags: []
+	tokens: ['love', 'baby', 'all', 'heart', 'the', 'best', 'wont', 'ever', 'leave', 'side', 'promise', '092312', 'forever']
+	words frequency: {'i': 0, 'love': 1, 'my': 0, 'baby': 1, 'with': 0, 'all': 1, 'heart': 1, 'your': 0, 'the': 1, 'best': 1, 'wont': 1, 'ever': 1, 'leave': 1, 'side': 1, 'promise': 1, '092312': 1, 'forever': 1}
+
+Tweet
+	tweet raw: after taylor kept throwing the ball into the gutter she gets a strike ... ? whatt ?
+	pos tags: {"taylor": "NN", "keep": "VBD", "throw": "VBG", "ball": "NN", "gutter": "NN", "get": "VBZ", "strike": "NN", "whatt": "NN"}
+	emojis: ['😳', '😜']
+	emoticons: []
+	hashtags: []
+	tokens: ['taylor', 'kept', 'throwing', 'ball', 'the', 'gutter', 'gets', 'strike', 'whatt', '?']
+	words frequency: {'after': 0, 'taylor': 1, 'keep': 1, 'throw': 1, 'the': 1, 'ball': 1, 'into': 0, 'gutter': 1, 'she': 0, 'get': 1, 'a': 0, 'strike': 1, 'whatt': 1}
+
+Tweet
+	tweet raw: ni seee relaxing hot bube back latere bath , country musi see , and candlelight .
+	pos tags: {"ni": "JJ", "seee": "NN", "relax": "VBG", "hot": "JJ", "bube": "NN", "back": "RB", "latere": "RB", "bath": "NN", "country": "NN", "musi": "VBD", "see": "NN", "candlelight": "NN"}
+	emojis: ['💚']
+	emoticons: []
+	hashtags: []
+	tokens: ['ni', 'seee', 'relaxing', 'hot', 'bube', 'back', 'latere', 'bath', 'country', 'musi', 'see', 'candlelight']
+	words frequency: {'ni': 1, 'seee': 1, 'relax': 1, 'hot': 1, 'bube': 1, 'back': 1, 'latere': 1, 'bath': 1, 'country': 1, 'musi': 1, 'see': 1, 'and': 0, 'candlelight': 1}
+
+Tweet
+	tweet raw: thanks for this soup it frigood gamein deli seeious !
+	pos tags: {"thanks": "NNS", "soup": "NN", "frigood": "VBD", "gamein": "JJ", "deli": "JJ", "seeious": "JJ"}
+	emojis: ['❤', '💚', '💜']
+	emoticons: []
+	hashtags: ['crab', 'bisque', 'loveyou']
+	tokens: ['thanks', 'this', 'soup', 'frigood', 'gamein', 'deli', 'seeious']
+	words frequency: {'thanks': 1, 'for': 0, 'this': 1, 'soup': 1, 'it': 0, 'frigood': 1, 'gamein': 1, 'deli': 1, 'seeious': 1}
+
+Tweet
+	tweet raw: i proud of you , tay !
+	pos tags: {"proud": "NN", "tay": "VB"}
+	emojis: ['😘', '😁']
+	emoticons: []
+	hashtags: []
+	tokens: ['proud', 'you', 'tay']
+	words frequency: {'i': 0, 'proud': 1, 'of': 0, 'you': 1, 'tay': 1}
+
+Tweet
+	tweet raw: uyy a las 12 am comienza la celebración ! estare despierta para mandarle mi resee youerdito !
+	pos tags: {"uyy": "IN", "las": "JJ", "12": "CD", "comienza": "JJ", "la": "NN", "celebraci\u00f3n": "NN", "estare": "NN", "despierta": "JJ", "para": "NN", "mandarle": "NN", "mi": "NN", "resee": "NN", "youerdito": "NN"}
+	emojis: []
+	emoticons: ['<3']
+	hashtags: []
+	tokens: ['uyy', 'las', '12', 'comienza', 'la', 'celebración', 'estare', 'despierta', 'para', 'mandarle', 'mi', 'resee', 'youerdito']
+	words frequency: {'uyy': 1, 'a': 0, 'las': 1, '12': 1, 'be': 0, 'comienza': 1, 'la': 1, 'celebración': 1, 'estare': 1, 'despierta': 1, 'para': 1, 'mandarle': 1, 'mi': 1, 'resee': 1, 'youerdito': 1}
+
+Tweet
+	tweet raw: no i will not because it makes you jealous
+	pos tags: {"make": "VBZ", "jealous": "JJ"}
+	emojis: ['😉', '😘']
+	emoticons: []
+	hashtags: []
+	tokens: ['i', 'not', 'it', 'makes', 'jealous']
+	words frequency: {'no': 0, 'i': 1, 'will': 0, 'not': 1, 'because': 0, 'it': 1, 'make': 1, 'you': 0, 'jealous': 1}
+
+Tweet
+	tweet raw: and the fallen shoes too , and the olive colored shirt
+	pos tags: {"fallen": "NN", "shoe": "NNS", "olive": "JJ", "color": "VBD", "shirt": "NN"}
+	emojis: []
+	emoticons: ['<3']
+	hashtags: []
+	tokens: ['fallen', 'shoes', 'and', 'the', 'olive', 'colored', 'shirt']
+	words frequency: {'and': 1, 'the': 1, 'fallen': 1, 'shoe': 1, 'too': 0, 'olive': 1, 'color': 1, 'shirt': 1}
+
+Tweet
+	tweet raw: haha just watch you be married within the next 2 years laughing out loud ... just watch and see
+	pos tags: {"haha": "NN", "watch": "NN", "marry": "VBN", "within": "IN", "next": "JJ", "2": "CD", "year": "NNS", "laugh": "VBG", "loud": "JJ", "see": "VB"}
+	emojis: []
+	emoticons: [':p']
+	hashtags: []
+	tokens: ['haha', 'watch', 'be', 'married', 'within', 'next', '2', 'years', 'laughing', 'loud', 'watch', 'see']
+	words frequency: {'haha': 1, 'just': 0, 'watch': 2, 'you': 0, 'be': 1, 'marry': 1, 'within': 1, 'the': 0, 'next': 1, '2': 1, 'year': 1, 'laugh': 1, 'out': 0, 'loud': 1, 'and': 0, 'see': 1}
+
+[]
+[<src.Token.Token object at 0x0000020727A75130>, <src.Token.Token object at 0x0000020727762CD0>, <src.Token.Token object at 0x0000020727A731F0>, <src.Token.Token object at 0x00000207278C7FD0>, <src.Token.Token object at 0x0000020727A77DC0>, <src.Token.Token object at 0x0000020727A65EE0>, <src.Token.Token object at 0x0000020727A6ACD0>, <src.Token.Token object at 0x0000020727747BE0>, <src.Token.Token object at 0x0000020727A73430>, <src.Token.Token object at 0x0000020727A6A220>, <src.Token.Token object at 0x0000020727A65880>, <src.Token.Token object at 0x0000020727A5B610>, <src.Token.Token object at 0x0000020727A5B070>, <src.Token.Token object at 0x0000020727A62250>, <src.Token.Token object at 0x0000020727A5E9D0>, <src.Token.Token object at 0x0000020727A7A310>, <src.Token.Token object at 0x0000020727A75190>, <src.Token.Token object at 0x0000020727A77730>, <src.Token.Token object at 0x0000020727A60790>, <src.Token.Token object at 0x0000020727A687F0>, <src.Token.Token object at 0x0000020727903C70>, <src.Token.Token object at 0x0000020727A7A250>, <src.Token.Token object at 0x00000207278DDD00>, <src.Token.Token object at 0x0000020727A60EB0>, <src.Token.Token object at 0x0000020727A6A190>, <src.Token.Token object at 0x0000020727A752B0>, <src.Token.Token object at 0x0000020727A7CC70>, <src.Token.Token object at 0x0000020727A70A90>, <src.Token.Token object at 0x0000020727A5E5B0>, <src.Token.Token object at 0x0000020727A77250>, <src.Token.Token object at 0x0000020727A654F0>, <src.Token.Token object at 0x0000020727A6BDF0>, <src.Token.Token object at 0x0000020727A6A4C0>, <src.Token.Token object at 0x0000020754F019A0>, <src.Token.Token object at 0x0000020727A73610>, <src.Token.Token object at 0x0000020727A5B220>, <src.Token.Token object at 0x0000020727A62E50>, <src.Token.Token object at 0x0000020727A6B8B0>, <src.Token.Token object at 0x0000020727A737F0>, <src.Token.Token object at 0x0000020727A6B3D0>, <src.Token.Token object at 0x0000020727A5E610>, <src.Token.Token object at 0x0000020728595D00>, <src.Token.Token object at 0x0000020727A655B0>, <src.Token.Token object at 0x0000020727A6AB80>, <src.Token.Token object at 0x0000020727A736D0>, <src.Token.Token object at 0x0000020727A70670>, <src.Token.Token object at 0x0000020727A65490>, <src.Token.Token object at 0x0000020727A7AD30>, <src.Token.Token object at 0x00000207278DD9A0>, <src.Token.Token object at 0x0000020727762B50>, <src.Token.Token object at 0x0000020727A68790>, <src.Token.Token object at 0x0000020727A65610>, <src.Token.Token object at 0x0000020727A70D60>, <src.Token.Token object at 0x0000020727A73970>, <src.Token.Token object at 0x0000020727A73820>, <src.Token.Token object at 0x0000020727A75D30>, <src.Token.Token object at 0x0000020727A73CA0>, <src.Token.Token object at 0x0000020727A6AD30>, <src.Token.Token object at 0x0000020727903EE0>, <src.Token.Token object at 0x00000207278DD5E0>, <src.Token.Token object at 0x0000020727A73910>, <src.Token.Token object at 0x0000020728595DC0>, <src.Token.Token object at 0x00000207277476D0>, <src.Token.Token object at 0x0000020727A68910>, <src.Token.Token object at 0x0000020727A6B790>, <src.Token.Token object at 0x00000207278DDD30>, <src.Token.Token object at 0x0000020727A77670>, <src.Token.Token object at 0x00000207278DDBB0>, <src.Token.Token object at 0x00000207278DD970>, <src.Token.Token object at 0x0000020727A7C340>, <src.Token.Token object at 0x0000020728595A60>, <src.Token.Token object at 0x0000020727A65730>, <src.Token.Token object at 0x0000020727A7CF10>, <src.Token.Token object at 0x0000020727A68850>, <src.Token.Token object at 0x0000020727A5BC70>, <src.Token.Token object at 0x0000020727A65430>, <src.Token.Token object at 0x0000020727A75F70>, <src.Token.Token object at 0x0000020727A705B0>, <src.Token.Token object at 0x0000020727A73E50>, <src.Token.Token object at 0x0000020727A7AC10>, <src.Token.Token object at 0x0000020727A7C130>, <src.Token.Token object at 0x0000020727A65AF0>, <src.Token.Token object at 0x0000020727A5E6D0>, <src.Token.Token object at 0x0000020727A622E0>, <src.Token.Token object at 0x0000020727A751F0>, <src.Token.Token object at 0x0000020727A6E130>, <src.Token.Token object at 0x0000020727A62B20>, <src.Token.Token object at 0x0000020727A60370>, <src.Token.Token object at 0x0000020727903B50>, <src.Token.Token object at 0x0000020727A7C3D0>, <src.Token.Token object at 0x0000020727A68610>, <src.Token.Token object at 0x0000020727A62CA0>, <src.Token.Token object at 0x0000020727A77A30>, <src.Token.Token object at 0x0000020727A62940>, <src.Token.Token object at 0x0000020727A5BA90>, <src.Token.Token object at 0x0000020727A7C670>, <src.Token.Token object at 0x0000020727A62B80>, <src.Token.Token object at 0x0000020727A62F40>, <src.Token.Token object at 0x0000020727A5B5B0>, <src.Token.Token object at 0x0000020727A73BB0>, <src.Token.Token object at 0x0000020727A7F0D0>, <src.Token.Token object at 0x0000020727A5E490>, <src.Token.Token object at 0x0000020727A77A90>, <src.Token.Token object at 0x0000020727A73F70>, <src.Token.Token object at 0x0000020727A6B610>, <src.Token.Token object at 0x0000020727A75DF0>, <src.Token.Token object at 0x0000020727A75AF0>, <src.Token.Token object at 0x0000020727A7AC70>, <src.Token.Token object at 0x0000020727A659D0>, <src.Token.Token object at 0x0000020727A6E0D0>, <src.Token.Token object at 0x0000020727A6EE50>, <src.Token.Token object at 0x0000020727A73310>, <src.Token.Token object at 0x0000020727A5B850>, <src.Token.Token object at 0x0000020727A77AF0>, <src.Token.Token object at 0x0000020727A70190>, <src.Token.Token object at 0x0000020727A6EF70>, <src.Token.Token object at 0x0000020727A62130>, <src.Token.Token object at 0x0000020727A5B790>, <src.Token.Token object at 0x0000020727A77790>, <src.Token.Token object at 0x0000020727A65E80>, <src.Token.Token object at 0x0000020727A601F0>, <src.Token.Token object at 0x0000020727A65550>, <src.Token.Token object at 0x0000020728595A30>, <src.Token.Token object at 0x0000020727A6AA60>, <src.Token.Token object at 0x0000020727A7AF10>, <src.Token.Token object at 0x0000020727A5BFD0>, <src.Token.Token object at 0x0000020727A755B0>, <src.Token.Token object at 0x0000020727A700D0>, <src.Token.Token object at 0x0000020727A62DF0>, <src.Token.Token object at 0x0000020728595340>, <src.Token.Token object at 0x0000020727A7C280>, <src.Token.Token object at 0x0000020727903FD0>, <src.Token.Token object at 0x0000020727A60430>, <src.Token.Token object at 0x0000020727A6B490>, <src.Token.Token object at 0x0000020727A70910>, <src.Token.Token object at 0x0000020727A6E9D0>, <src.Token.Token object at 0x0000020727762FD0>, <src.Token.Token object at 0x0000020727A7C910>, <src.Token.Token object at 0x0000020727A7CD30>, <src.Token.Token object at 0x0000020727A6A9D0>, <src.Token.Token object at 0x0000020727A75A30>, <src.Token.Token object at 0x0000020727A5ED30>, <src.Token.Token object at 0x00000207278DDCA0>, <src.Token.Token object at 0x0000020727A771F0>, <src.Token.Token object at 0x0000020727A5EB50>, <src.Token.Token object at 0x0000020727A77430>, <src.Token.Token object at 0x0000020727A5B190>, <src.Token.Token object at 0x0000020727903D30>, <src.Token.Token object at 0x0000020727A62A00>, <src.Token.Token object at 0x0000020727A5E850>, <src.Token.Token object at 0x0000020727A778E0>, <src.Token.Token object at 0x0000020727A6B550>, <src.Token.Token object at 0x0000020727A7AF70>, <src.Token.Token object at 0x0000020727A5BF40>, <src.Token.Token object at 0x0000020727A6A610>, <src.Token.Token object at 0x0000020727A75430>, <src.Token.Token object at 0x0000020727A6ED90>, <src.Token.Token object at 0x0000020727A70310>, <src.Token.Token object at 0x0000020727903B20>, <src.Token.Token object at 0x0000020727903EB0>, <src.Token.Token object at 0x0000020727A5BC10>, <src.Token.Token object at 0x0000020727A5E250>, <src.Token.Token object at 0x0000020727A70490>, <src.Token.Token object at 0x0000020727A60FD0>, <src.Token.Token object at 0x0000020727A7F130>, <src.Token.Token object at 0x0000020727A65820>, <src.Token.Token object at 0x0000020727A75D90>, <src.Token.Token object at 0x0000020727A7A3D0>, <src.Token.Token object at 0x0000020727A652B0>, <src.Token.Token object at 0x0000020727A7C4C0>, <src.Token.Token object at 0x0000020727A5E370>, <src.Token.Token object at 0x0000020727A6A070>, <src.Token.Token object at 0x0000020727A5BD30>, <src.Token.Token object at 0x0000020727A5E2B0>, <src.Token.Token object at 0x0000020727A5B430>, <src.Token.Token object at 0x0000020727903CD0>, <src.Token.Token object at 0x0000020727A5E310>, <src.Token.Token object at 0x0000020727A73A30>, <src.Token.Token object at 0x0000020727A60F70>, <src.Token.Token object at 0x0000020727A60E50>, <src.Token.Token object at 0x0000020727A73A90>, <src.Token.Token object at 0x0000020727A70EB0>, <src.Token.Token object at 0x0000020727A5ECD0>, <src.Token.Token object at 0x0000020727A68970>, <src.Token.Token object at 0x00000207278DD910>, <src.Token.Token object at 0x0000020727A6E250>, <src.Token.Token object at 0x00000207278D7640>, <src.Token.Token object at 0x0000020727A62BE0>, <src.Token.Token object at 0x0000020728595FA0>, <src.Token.Token object at 0x0000020728595640>, <src.Token.Token object at 0x0000020727A733D0>, <src.Token.Token object at 0x0000020754EB5310>, <src.Token.Token object at 0x0000020727A607F0>, <src.Token.Token object at 0x0000020727A6E2B0>, <src.Token.Token object at 0x0000020727A5B490>, <src.Token.Token object at 0x0000020727A7A370>, <src.Token.Token object at 0x0000020727A709D0>, <src.Token.Token object at 0x0000020727A65370>, <src.Token.Token object at 0x0000020727903DF0>, <src.Token.Token object at 0x0000020727A65670>, <src.Token.Token object at 0x0000020727A77CD0>, <src.Token.Token object at 0x0000020727A6A730>, <src.Token.Token object at 0x0000020727A7C0D0>, <src.Token.Token object at 0x00000207277621F0>, <src.Token.Token object at 0x0000020727A73880>, <src.Token.Token object at 0x0000020727A706D0>, <src.Token.Token object at 0x0000020727A60D30>, <src.Token.Token object at 0x0000020727A658E0>, <src.Token.Token object at 0x0000020727A62C40>, <src.Token.Token object at 0x0000020727A65C10>, <src.Token.Token object at 0x0000020727A5BD90>, <src.Token.Token object at 0x0000020727A5E670>, <src.Token.Token object at 0x0000020727A73160>, <src.Token.Token object at 0x0000020727762FA0>, <src.Token.Token object at 0x0000020727A753D0>, <src.Token.Token object at 0x0000020727762BB0>, <src.Token.Token object at 0x0000020727A75850>, <src.Token.Token object at 0x0000020727A5E550>, <src.Token.Token object at 0x0000020727903E20>, <src.Token.Token object at 0x0000020727A5B0D0>, <src.Token.Token object at 0x0000020727A62A60>, <src.Token.Token object at 0x0000020727A7CAF0>, <src.Token.Token object at 0x0000020727A5BE80>, <src.Token.Token object at 0x0000020727A7C730>, <src.Token.Token object at 0x0000020727A707F0>, <src.Token.Token object at 0x0000020727A7CEB0>, <src.Token.Token object at 0x0000020727A628E0>, <src.Token.Token object at 0x0000020727A75910>, <src.Token.Token object at 0x0000020727A65CD0>, <src.Token.Token object at 0x0000020727A6A790>, <src.Token.Token object at 0x0000020727A6BD90>, <src.Token.Token object at 0x0000020727A77BB0>, <src.Token.Token object at 0x0000020727A7C2E0>, <src.Token.Token object at 0x0000020727A75EB0>, <src.Token.Token object at 0x0000020728595A00>, <src.Token.Token object at 0x0000020727A70C10>, <src.Token.Token object at 0x0000020727A62790>, <src.Token.Token object at 0x0000020727A5E070>, <src.Token.Token object at 0x0000020727A5E190>, <src.Token.Token object at 0x0000020727A75670>, <src.Token.Token object at 0x0000020727A7AA90>, <src.Token.Token object at 0x0000020727A7C610>, <src.Token.Token object at 0x0000020727A68E50>, <src.Token.Token object at 0x0000020727A5BA00>, <src.Token.Token object at 0x0000020727A7A490>, <src.Token.Token object at 0x0000020727A73F10>, <src.Token.Token object at 0x0000020728595820>, <src.Token.Token object at 0x0000020727A5B4F0>, <src.Token.Token object at 0x0000020727A77970>, <src.Token.Token object at 0x0000020727A6A8B0>, <src.Token.Token object at 0x0000020727A60CD0>, <src.Token.Token object at 0x0000020727A756D0>, <src.Token.Token object at 0x0000020727A68A60>, <src.Token.Token object at 0x0000020727A65790>, <src.Token.Token object at 0x0000020727A6EFA0>, <src.Token.Token object at 0x0000020727A7ACD0>, <src.Token.Token object at 0x0000020727A70610>, <src.Token.Token object at 0x0000020727A65970>, <src.Token.Token object at 0x0000020727A62880>, <src.Token.Token object at 0x0000020727A70CA0>, <src.Token.Token object at 0x0000020727A75970>, <src.Token.Token object at 0x0000020727A77C10>, <src.Token.Token object at 0x0000020727A5EF70>, <src.Token.Token object at 0x0000020728595220>, <src.Token.Token object at 0x0000020727A6A340>, <src.Token.Token object at 0x0000020727A6AC10>, <src.Token.Token object at 0x0000020727A5B550>, <src.Token.Token object at 0x0000020727A70E20>, <src.Token.Token object at 0x0000020727A68730>, <src.Token.Token object at 0x0000020727A602B0>, <src.Token.Token object at 0x0000020727A77130>, <src.Token.Token object at 0x0000020727A73EB0>, <src.Token.Token object at 0x0000020727A732B0>, <src.Token.Token object at 0x0000020727A60490>, <src.Token.Token object at 0x0000020727A7C5B0>, <src.Token.Token object at 0x0000020727A75C10>, <src.Token.Token object at 0x0000020727A5EA30>, <src.Token.Token object at 0x0000020727A6B430>, <src.Token.Token object at 0x0000020727A5E130>, <src.Token.Token object at 0x0000020727A757F0>, <src.Token.Token object at 0x0000020727A7AE50>, <src.Token.Token object at 0x0000020727A6E070>, <src.Token.Token object at 0x0000020727A6AB20>, <src.Token.Token object at 0x0000020727A5BDF0>, <src.Token.Token object at 0x0000020727A75610>, <src.Token.Token object at 0x0000020727A5B670>, <src.Token.Token object at 0x0000020727A65E20>, <src.Token.Token object at 0x0000020727A5B370>, <src.Token.Token object at 0x0000020727A6B850>, <src.Token.Token object at 0x0000020728595970>, <src.Token.Token object at 0x0000020727A77850>, <src.Token.Token object at 0x0000020727A75070>, <src.Token.Token object at 0x0000020727A68F10>, <src.Token.Token object at 0x0000020727A70850>, <src.Token.Token object at 0x0000020727A68A00>, <src.Token.Token object at 0x0000020727A7CFD0>, <src.Token.Token object at 0x0000020727A73070>, <src.Token.Token object at 0x0000020727A70760>, <src.Token.Token object at 0x0000020727A6EAF0>, <src.Token.Token object at 0x0000020727A770D0>, <src.Token.Token object at 0x0000020727A6A7F0>, <src.Token.Token object at 0x0000020727A657F0>, <src.Token.Token object at 0x0000020727A5B970>, <src.Token.Token object at 0x0000020727A70430>, <src.Token.Token object at 0x0000020727A70DC0>, <src.Token.Token object at 0x00000207278DDCD0>, <src.Token.Token object at 0x0000020727A6BF70>, <src.Token.Token object at 0x0000020727A62340>, <src.Token.Token object at 0x0000020727A6BD30>, <src.Token.Token object at 0x0000020727A6A3D0>, <src.Token.Token object at 0x0000020727A65A90>, <src.Token.Token object at 0x0000020727A6EDF0>, <src.Token.Token object at 0x00000207285951F0>, <src.Token.Token object at 0x0000020727A5E790>, <src.Token.Token object at 0x0000020727A5EFD0>, <src.Token.Token object at 0x0000020727A777F0>, <src.Token.Token object at 0x0000020727A60610>, <src.Token.Token object at 0x0000020727A7C850>, <src.Token.Token object at 0x00000207278D7220>, <src.Token.Token object at 0x00000207278DDE20>, <src.Token.Token object at 0x0000020728595C10>, <src.Token.Token object at 0x0000020727A7CCD0>, <src.Token.Token object at 0x0000020727A60670>, <src.Token.Token object at 0x0000020727A7A4F0>, <src.Token.Token object at 0x0000020727A62730>, <src.Token.Token object at 0x0000020727A70550>, <src.Token.Token object at 0x0000020727A626D0>, <src.Token.Token object at 0x0000020727A73B50>, <src.Token.Token object at 0x0000020727A70D00>, <src.Token.Token object at 0x00000207278DD8E0>, <src.Token.Token object at 0x0000020727A6EF10>, <src.Token.Token object at 0x0000020727A77490>, <src.Token.Token object at 0x0000020727A75490>, <src.Token.Token object at 0x0000020727A7F220>, <src.Token.Token object at 0x0000020727762940>, <src.Token.Token object at 0x0000020727A68F70>, <src.Token.Token object at 0x0000020727A70A30>, <src.Token.Token object at 0x0000020727A70730>, <src.Token.Token object at 0x0000020727A65C70>, <src.Token.Token object at 0x0000020727A754F0>, <src.Token.Token object at 0x0000020727A6B310>, <src.Token.Token object at 0x0000020727A5B9D0>, <src.Token.Token object at 0x0000020727903D90>, <src.Token.Token object at 0x00000207278DD880>, <src.Token.Token object at 0x0000020727A6AD90>, <src.Token.Token object at 0x00000207278DDE50>, <src.Token.Token object at 0x0000020727A773A0>, <src.Token.Token object at 0x0000020727A627F0>, <src.Token.Token object at 0x0000020727A6A100>, <src.Token.Token object at 0x0000020727A7A430>, <src.Token.Token object at 0x00000207278DD9D0>, <src.Token.Token object at 0x0000020727A6BE50>, <src.Token.Token object at 0x0000020727A5EC10>, <src.Token.Token object at 0x0000020727A60160>, <src.Token.Token object at 0x0000020727A70970>, <src.Token.Token object at 0x0000020727A734C0>, <src.Token.Token object at 0x0000020727903F70>, <src.Token.Token object at 0x0000020727A5E0D0>, <src.Token.Token object at 0x0000020727A77880>, <src.Token.Token object at 0x0000020727762EB0>, <src.Token.Token object at 0x0000020727A6BF10>, <src.Token.Token object at 0x0000020727A6A2E0>, <src.Token.Token object at 0x0000020727A7AB50>, <src.Token.Token object at 0x0000020754ECB1F0>, <src.Token.Token object at 0x0000020727A6E1F0>, <src.Token.Token object at 0x0000020727A7C160>, <src.Token.Token object at 0x0000020727A704F0>, <src.Token.Token object at 0x0000020727A5B910>, <src.Token.Token object at 0x0000020727A5B3D0>, <src.Token.Token object at 0x0000020727A708B0>, <src.Token.Token object at 0x0000020727A5E3D0>, <src.Token.Token object at 0x0000020727A70250>, <src.Token.Token object at 0x00000207278DD7F0>, <src.Token.Token object at 0x0000020727762BE0>, <src.Token.Token object at 0x0000020727A603D0>, <src.Token.Token object at 0x0000020727A6EC10>, <src.Token.Token object at 0x00000207278DDE80>, <src.Token.Token object at 0x0000020727A730D0>, <src.Token.Token object at 0x0000020728595940>, <src.Token.Token object at 0x0000020727A5B8B0>, <src.Token.Token object at 0x0000020727A6A430>, <src.Token.Token object at 0x0000020727A7C550>, <src.Token.Token object at 0x0000020727A70130>, <src.Token.Token object at 0x0000020727A5EBB0>, <src.Token.Token object at 0x0000020727A77610>, <src.Token.Token object at 0x0000020727A5B7F0>, <src.Token.Token object at 0x0000020727A75520>, <src.Token.Token object at 0x0000020727A77340>, <src.Token.Token object at 0x0000020727A739D0>, <src.Token.Token object at 0x0000020727A60DF0>, <src.Token.Token object at 0x0000020727A65BB0>, <src.Token.Token object at 0x0000020727A7C790>, <src.Token.Token object at 0x0000020727A6B5B0>, <src.Token.Token object at 0x0000020727A5B310>, <src.Token.Token object at 0x0000020727A7C430>, <src.Token.Token object at 0x0000020727A7AFD0>, <src.Token.Token object at 0x0000020727A75F10>, <src.Token.Token object at 0x0000020727A7AE80>, <src.Token.Token object at 0x0000020727A5BB50>, <src.Token.Token object at 0x0000020727A73DC0>, <src.Token.Token object at 0x0000020727A60070>, <src.Token.Token object at 0x0000020727A620D0>, <src.Token.Token object at 0x0000020727A6B4F0>, <src.Token.Token object at 0x0000020727A5B130>, <src.Token.Token object at 0x0000020727A6A670>, <src.Token.Token object at 0x0000020727A7C070>, <src.Token.Token object at 0x0000020727A600D0>, <src.Token.Token object at 0x0000020727A68EB0>, <src.Token.Token object at 0x0000020727A5E430>, <src.Token.Token object at 0x0000020727A5EEB0>, <src.Token.Token object at 0x0000020727A5BEE0>, <src.Token.Token object at 0x0000020727A772E0>, <src.Token.Token object at 0x00000207278DDAC0>, <src.Token.Token object at 0x0000020728595190>, <src.Token.Token object at 0x0000020727A6AC70>, <src.Token.Token object at 0x0000020727A6BFD0>, <src.Token.Token object at 0x00000207278DD640>, <src.Token.Token object at 0x0000020727A7C220>, <src.Token.Token object at 0x0000020727A65A30>, <src.Token.Token object at 0x0000020728595F70>, <src.Token.Token object at 0x0000020727A62070>, <src.Token.Token object at 0x0000020727A6E340>, <src.Token.Token object at 0x0000020727A5E1C0>, <src.Token.Token object at 0x0000020727A65B50>, <src.Token.Token object at 0x0000020727A5B1F0>, <src.Token.Token object at 0x0000020727A73730>, <src.Token.Token object at 0x0000020727A75790>, <src.Token.Token object at 0x0000020727A7A5E0>, <src.Token.Token object at 0x0000020727A7C7F0>, <src.Token.Token object at 0x0000020727A60F10>, <src.Token.Token object at 0x0000020727A7C970>, <src.Token.Token object at 0x0000020727A5EAF0>, <src.Token.Token object at 0x0000020727A62AC0>, <src.Token.Token object at 0x0000020727A7A2B0>, <src.Token.Token object at 0x00000207285951C0>, <src.Token.Token object at 0x0000020727A6E970>, <src.Token.Token object at 0x0000020728595D30>, <src.Token.Token object at 0x0000020727A6A550>, <src.Token.Token object at 0x0000020727903C40>, <src.Token.Token object at 0x0000020727A5E7F0>, <src.Token.Token object at 0x0000020727A5EC70>, <src.Token.Token object at 0x0000020727A7CC10>, <src.Token.Token object at 0x0000020727762DF0>, <src.Token.Token object at 0x0000020727A702B0>, <src.Token.Token object at 0x0000020727A6E910>, <src.Token.Token object at 0x0000020727A65DC0>, <src.Token.Token object at 0x0000020727A7ADF0>, <src.Token.Token object at 0x0000020727A7CA90>, <src.Token.Token object at 0x0000020727A7C6D0>, <src.Token.Token object at 0x0000020727A7A550>, <src.Token.Token object at 0x0000020728595310>]
