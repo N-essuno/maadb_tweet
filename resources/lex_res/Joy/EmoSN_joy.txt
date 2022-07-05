@@ -274,7 +274,6 @@ dance_samba
 written
 wake_up_morning
 good_soul
-beautiful
 arts
 pleasant
 entertain
