@@ -86,8 +86,8 @@ def test_pipeline1():
 
 def test_pipeline2():
     conn = test_db_connection()
-    words = conn.pipeline2(lex_res_1)
-    print(words)
+    words_percentage = conn.pipeline2(lex_res_1)
+    print(words_percentage)
 
 
 def test_pipeline3():
@@ -97,4 +97,4 @@ def test_pipeline3():
 
 
 if __name__ == "__main__":
-    test_pipeline1()
+    test_pipeline2()

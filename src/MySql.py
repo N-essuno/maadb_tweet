@@ -282,14 +282,17 @@ class DBConnection:
         :param lex_res: lexical resource which words we want to check
         """
         query = read_query(PATH_SQL_PIPELINE2)
-        query_parameters: Tuple[str] = (lex_res.sentiment,)
+        query_parameters: Tuple[str, str] = (lex_res.filename, lex_res.sentiment.lower())
 
         self.cursor.execute(query, query_parameters)
         result = self.cursor.fetchall()
         num_words_found: int = result[0][0]
         num_total_words: int = len(lex_res.words)
 
-        return num_words_found / num_total_words * 100
+        print(num_total_words)
+        print(num_words_found)
+
+        return num_words_found / num_total_words
 
     def pipeline3(self, sentiment: str) -> List[str]:
         """
