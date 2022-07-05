@@ -14,6 +14,7 @@ from src.Tweet import Tweet
 PATH_CURRENT_DIRECTORY: Path = pathlib.Path(__file__).parent.resolve()
 
 PATH_SQL_FILES: Path = PATH_CURRENT_DIRECTORY.joinpath("queries")
+PATH_SQL_PIPELINE1: Path = PATH_SQL_FILES.joinpath("pipeline1.sql")
 PATH_SQL_PIPELINE2: Path = PATH_SQL_FILES.joinpath("pipeline2.sql")
 PATH_SQL_PIPELINE3: Path = PATH_SQL_FILES.joinpath("pipeline3.sql")
 
@@ -254,24 +255,17 @@ class DBConnection:
         self.cursor.execute(query)
         self.db_connection.commit()
 
-    def pipeline1(self, x: int, sentiment: str) -> List[Tuple[str, int]]:
+    def pipeline1(self, x: int, sentiment: str, content_type: str) -> List[Tuple[str, int]]:
         """
-        Returns List[Tuple[word, word_occurrences]] for the x most used words in the tweets of sentiment
-        :param x: number of most used words to return
+        Returns List[Tuple[content, content_occurrences]] for the x most used contents of type content_type in the
+        tweets of sentiment
+        :param content_type: type of content ["word", "emoji", "emoticon", "hashtag"]
+        :param x: number of most used contents to return
         :param sentiment: sentiment of tweets to look for
         """
         print(sentiment)
-        query = ("SELECT tok.content, COUNT(tok.content) "
-                 "FROM tweet AS t "
-                 "JOIN	tweettoken AS tt ON t.id = tt.tweet "
-                 "JOIN	token tok ON tt.content = tok.content "
-                 "    AND tt.content_type = tok.content_type "
-                 "WHERE t.sentiment = %s "
-                 "    AND tok.content_type = 'word' "
-                 "GROUP BY tok.content "
-                 "ORDER BY COUNT(tok.content) DESC "
-                 "LIMIT %s; ")
-        query_parameters: Tuple[str, int] = (sentiment, x)
+        query = (read_query(PATH_SQL_PIPELINE1))
+        query_parameters: Tuple[str, str, int] = (sentiment, content_type, x)
         self.cursor.execute(query, query_parameters)
         result = self.cursor.fetchall()
         return result
@@ -297,7 +291,7 @@ class DBConnection:
         :param sentiment: sentiment of tweets and lexical resources to be checked
         """
         query = read_query(PATH_SQL_PIPELINE3)
-        query_parameters: Dict[str, str] = {"sentiment": sentiment}
+        query_parameters: Tuple[str, str] = (sentiment, sentiment)
 
         self.cursor.execute(query, query_parameters)
         result = self.cursor.fetchall()
