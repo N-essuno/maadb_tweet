@@ -14,17 +14,18 @@ from nltk.corpus import wordnet
 from src.Token import Token
 
 PUNCTUATION_MARKS = [',', '?', '!', '.', ';', ':', '\\', '/', '(', ')', '&', ' ', '_', '+', '=', '<', '>', '"', '...',
-                     '..', '....', '.....', '.....', '@', '$']
+                     '..', '....', '.....', '.....', '@', '$', '*', "'", '#', '-', '--', '-i', '-o', '-t',
+                     '.......', '.........', '//', '////', '/3']
 
 EMOTICONS_POS = ['B-)', ':)', ':-)', ":')", ":'-)", ':D', ':-D', ':\'-)', ":')", ':o)', ':]', ':3', ':c)', ':>', '=]',
                  '8)', '=)', ':}', ':^)', '8-D', '8D', 'x-D', 'xD', 'X-D', 'XD', '=-D', '=D', '=-3', '=3', 'B^D',
                  ':-))', ':*', ':^*', '( \'}{\' )', '^^', '(^_^)', '^-^', "^.^", "^3\^", "\^L\^", ";)", "o.o", "O.O",
-                 "<3", ':P', ':p']
+                 "<3", ':P', ':p', '=\\']
 EMOTICONS_NEG = [':(', ':-(', ":'(", ":'-(", '>:[', ':-c', ':c', ':-<', ':<', ':-[', ':[', ':{', ':\'-(', ':\'(',
                  ' _( ', ':\'[', "='(", "' [", "='[", ":'-<", ":' <", ":'<", "=' <", "='<", "T_T", "T.T", "(T_T)",
                  "y_y", "y.y", "(Y_Y)", ";-;", ";_;", ";.;", ":_:", "o .__. o", ".-.", ":/", ";(", "=/", "0_o", "o_0",
                  "o_o", "O_O", "o_O", "O_o", "o_o", "0_O", "O_0", "0.o", "o.0", "o.o", "O.O", "o.O", "O.o", "o.o",
-                 "0.O", "O.0" "-___-", "-_____-", "=d", 'xd', 'dx']
+                 "0.O", "O.0" "-___-", "-_____-", "=d", 'xd', 'dx', '-.-', '-/', '-\\', '-___-']
 EMOTICONS = EMOTICONS_NEG + EMOTICONS_POS
 
 EMOJI_POS = [u'\U0001F601', u'\U0001F602', u'\U0001F603', u'\U0001F604', u'\U0001F605', u'\U0001F606', u'\U0001F609',
@@ -219,37 +220,6 @@ class Tweet:
         tweet_string = tweet_string + "\n"
         return tweet_string
 
-
-    def get_tokens(self) -> Dict[Token, int]:
-        map_token_frequency: Dict[Token, int] = {}
-
-        for word in self.word_frequency:
-            freq = self.word_frequency[word]
-            map_token_frequency[Token(word, "word")] = freq
-
-        for emoji in self.emojis:
-            if map_token_frequency.get(Token(emoji, "emoji")) is None:
-                map_token_frequency[Token(emoji, "emoji")] = 1
-            else:
-                count = map_token_frequency[Token(emoji, "emoji")]
-                map_token_frequency[Token(emoji, "emoji")] = count + 1
-
-        for emoticon in self.emoticons:
-            if map_token_frequency.get(Token(emoticon, "emoticon")) is None:
-                map_token_frequency[Token(emoticon, "emoticon")] = 1
-            else:
-                count = map_token_frequency[Token(emoticon, "emoticon")]
-                map_token_frequency[Token(emoticon, "emoticon")] = count + 1
-
-        for hashtag in self.hashtags:
-            if map_token_frequency.get(Token(hashtag, "hashtag")) is None:
-                map_token_frequency[Token(hashtag, "hashtag")] = 1
-            else:
-                count = map_token_frequency[Token(hashtag, "hashtag")]
-                map_token_frequency[Token(hashtag, "hashtag")] = count + 1
-
-        return map_token_frequency
-
     def read_hashtags(self) -> None:
         self.hashtags = re.findall(r"#(\w+)", self.text)
         to_remove = ['#' + hashtag for hashtag in self.hashtags]
@@ -369,6 +339,38 @@ class Tweet:
         self.word_frequency = word_freq
 
     # Support functions
+
+
+    def get_tokens(self) -> Dict[Token, int]:
+        map_token_frequency: Dict[Token, int] = {}
+
+        for word in self.word_frequency:
+            freq = self.word_frequency[word]
+            if word in self.pos_tags and freq > 0:
+                map_token_frequency[Token(word, "word")] = freq
+
+        for emoji in self.emojis:
+            if map_token_frequency.get(Token(emoji, "emoji")) is None:
+                map_token_frequency[Token(emoji, "emoji")] = 1
+            else:
+                count = map_token_frequency[Token(emoji, "emoji")]
+                map_token_frequency[Token(emoji, "emoji")] = count + 1
+
+        for emoticon in self.emoticons:
+            if map_token_frequency.get(Token(emoticon, "emoticon")) is None:
+                map_token_frequency[Token(emoticon, "emoticon")] = 1
+            else:
+                count = map_token_frequency[Token(emoticon, "emoticon")]
+                map_token_frequency[Token(emoticon, "emoticon")] = count + 1
+
+        for hashtag in self.hashtags:
+            if map_token_frequency.get(Token(hashtag, "hashtag")) is None:
+                map_token_frequency[Token(hashtag, "hashtag")] = 1
+            else:
+                count = map_token_frequency[Token(hashtag, "hashtag")]
+                map_token_frequency[Token(hashtag, "hashtag")] = count + 1
+
+        return map_token_frequency
 
     def get_words(self) -> List[str]:
         return list(set(self.text.split()))
