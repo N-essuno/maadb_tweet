@@ -97,4 +97,4 @@ def test_pipeline3():
 
 
 if __name__ == "__main__":
-    test_pipeline2()
+    test_pipeline3()
