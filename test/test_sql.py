@@ -80,7 +80,8 @@ def test_insert_delete_lex_res():
 
 def test_pipeline1():
     conn = test_db_connection()
-    conn.pipeline1(5, "Joy")
+    result = conn.pipeline1(5, "Sadness", "emoji")
+    print(result)
 
 
 def test_pipeline2():
@@ -96,4 +97,4 @@ def test_pipeline3():
 
 
 if __name__ == "__main__":
-    test_pipeline1()
+    test_pipeline3()
