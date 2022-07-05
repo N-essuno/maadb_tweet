@@ -80,12 +80,12 @@ def test_insert_delete_lex_res():
 
 def test_pipeline1():
     conn = test_db_connection()
-    conn.get_x_most_used_words_for_sentiment(5, "Joy")
+    conn.pipeline1(5, "Joy")
 
 
 def test_pipeline2():
     conn = test_db_connection()
-    words = conn.get_percentage_words_lex_res_appear_in_tweet_of_same_sentiment(lex_res_1)
+    words = conn.pipeline2(lex_res_1)
     print(words)
 
 
@@ -96,4 +96,4 @@ def test_pipeline3():
 
 
 if __name__ == "__main__":
-    test_pipeline3()
+    test_pipeline1()

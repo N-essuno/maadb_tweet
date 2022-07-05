@@ -11,9 +11,7 @@ from src.LexicalResource import LexicalResource
 from src.Token import Token
 from src.Tweet import Tweet
 
-
 PATH_CURRENT_DIRECTORY: Path = pathlib.Path(__file__).parent.resolve()
-
 
 PATH_SQL_FILES: Path = PATH_CURRENT_DIRECTORY.joinpath("queries")
 PATH_SQL_PIPELINE2: Path = PATH_SQL_FILES.joinpath("pipeline2.sql")
@@ -256,7 +254,12 @@ class DBConnection:
         self.cursor.execute(query)
         self.db_connection.commit()
 
-    def get_x_most_used_words_for_sentiment(self, x: int, sentiment: str) -> List[str]:
+    def pipeline1(self, x: int, sentiment: str) -> List[Tuple[str, int]]:
+        """
+        Returns List[Tuple[word, word_occurrences]] for the x most used words in the tweets of sentiment
+        :param x: number of most used words to return
+        :param sentiment: sentiment of tweets to look for
+        """
         print(sentiment)
         query = ("SELECT tok.content, COUNT(tok.content) "
                  "FROM tweet AS t "
@@ -268,29 +271,25 @@ class DBConnection:
                  "GROUP BY tok.content "
                  "ORDER BY COUNT(tok.content) DESC "
                  "LIMIT %s; ")
-        # query = "SELECT COUNT(tok.content), tok.content FROM tweet AS t JOIN	tweettoken AS tt ON t.id = tt.tweet
-        # JOIN	token tok ON tt.content = tok.content AND tt.content_type = tok.content_type WHERE t.sentiment = %s
-        # AND tok.content_type = 'word' GROUP BY tok.content ORDER BY COUNT(tok.content) DESC LIMIT %s;"
         query_parameters: Tuple[str, int] = (sentiment, x)
         self.cursor.execute(query, query_parameters)
         result = self.cursor.fetchall()
-        print(result)
-        # TODO check!!!!!!
+        return result
 
-    def get_percentage_words_lex_res_appear_in_tweet_of_same_sentiment(self, lex_res: LexicalResource) -> float:
+    def pipeline2(self, lex_res: LexicalResource) -> float:
         """
         Returns percentage of words from lex_res that appear at least once in a Tweet of the same sentiment as lex_res
         :param lex_res: lexical resource which words we want to check
         """
         query = read_query(PATH_SQL_PIPELINE2)
-        query_parameters: Tuple[str] = (lex_res.sentiment, )
+        query_parameters: Tuple[str] = (lex_res.sentiment,)
 
         self.cursor.execute(query, query_parameters)
         result = self.cursor.fetchall()
         num_words_found: int = result[0][0]
         num_total_words: int = len(lex_res.word_list)
 
-        return num_words_found/num_total_words * 100
+        return num_words_found / num_total_words * 100
 
     def pipeline3(self, sentiment: str) -> List[str]:
         """
