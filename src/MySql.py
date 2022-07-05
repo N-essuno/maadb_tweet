@@ -17,6 +17,7 @@ PATH_CURRENT_DIRECTORY: Path = pathlib.Path(__file__).parent.resolve()
 
 PATH_SQL_FILES: Path = PATH_CURRENT_DIRECTORY.joinpath("queries")
 PATH_SQL_PIPELINE2: Path = PATH_SQL_FILES.joinpath("pipeline2.sql")
+PATH_SQL_PIPELINE3: Path = PATH_SQL_FILES.joinpath("pipeline3.sql")
 
 
 def read_query(path: Path) -> str:
@@ -173,62 +174,6 @@ class DBConnection:
         self.cursor.executemany(insert_query, tokens_tuples)
         print(self.cursor.rowcount, "record(s) inserted")
 
-    # def insert_tweets(self, tweets: List[Tweet]):
-    #     tokens_list: List[Token] = []
-    #     for tweet in tweets:
-    #         # insert tweet
-    #         # insert_tweet_query = "INSERT INTO tweet (sentiment) VALUES ('{}');".format(tweet.sentiment)
-    #         # self.launch_query(insert_tweet_query)
-    #
-    #         # words = tweet.words
-    #         # emojis = tweet.emojis
-    #         # emoticons = tweet.emoticons
-    #         # hashtags = tweet.hashtags
-    #
-    #         tokens_list += tweet.get_tokens()
-    #     # get contents that already exist in db and exclude it from insert query. Doing it now avoids checking
-    #     # duplicates on each insert
-    #     tokens_already_in_db = self.select_tokens_from_list(tokens_list)
-    #
-    #     self.insert_tokens(new_words, "word", False)
-    #     self.insert_tokens(new_emojis, "emoji", False)
-    #     self.insert_tokens(new_emoticons, "emoticon", False)
-    #     self.insert_tokens(new_hashtags, "hashtag", False)
-    #
-    #     words_token_list: List[List[str]] = []
-    #     emojis_token_list: List[List[str]] = []
-    #     emoticons_token_list: List[List[str]] = []
-    #     hashtags_token_list: List[List[str]] = []
-    #
-    #     for word in words:
-    #         words_token_list.append([word, "word"])
-    #     for emoji in emojis:
-    #         words_token_list.append([emoji, "emoji"])
-    #     for emoticon in emoticons:
-    #         words_token_list.append([emoticon, "emoticon"])
-    #     for hashtag in hashtags:
-    #         words_token_list.append([hashtag, "hashtag"])
-    #
-    #         # insert words
-    #         # insert emojis
-    #         # insert emoticons
-    #
-    #     # for lexical_resource in lexical_resources:
-    #     #     # compose values to insert
-    #     #     name = lexical_resource.filename
-    #     #     sentiment = lexical_resource.sentiment
-    #     #     num_words = lexical_resource.get_number_of_words()
-    #     #
-    #     #     lexical_resources_values.append([name, num_words, sentiment])
-    #     #
-    #     # lexical_resources_values_query_format = convert_list_of_values_to_query_format(lexical_resources_values)
-    #     #
-    #     # insert_query = "INSERT INTO lexicalresource (name, num_words, sentiment) VALUES {};".format(
-    #     #     lexical_resources_values_query_format)
-    #     #
-    #     # self.launch_query(insert_query)
-    #     # print(self.cursor.rowcount, "record(s) inserted")
-
     def insert_tweets_records_get_ids(self, sentiments: List[str]) -> List[int]:
         tweet_ids = []
         for sentiment in sentiments:
@@ -311,7 +256,7 @@ class DBConnection:
         self.cursor.execute(query)
         self.db_connection.commit()
 
-    def get_x_most_used_words_for_sentiment(self, x: int, sentiment: str):
+    def get_x_most_used_words_for_sentiment(self, x: int, sentiment: str) -> List[str]:
         print(sentiment)
         query = ("SELECT tok.content, COUNT(tok.content) "
                  "FROM tweet AS t "
@@ -330,6 +275,7 @@ class DBConnection:
         self.cursor.execute(query, query_parameters)
         result = self.cursor.fetchall()
         print(result)
+        # TODO check!!!!!!
 
     def get_percentage_words_lex_res_appear_in_tweet_of_same_sentiment(self, lex_res: LexicalResource) -> float:
         """
@@ -345,3 +291,17 @@ class DBConnection:
         num_total_words: int = len(lex_res.word_list)
 
         return num_words_found/num_total_words * 100
+
+    def pipeline3(self, sentiment: str) -> List[str]:
+        """
+        Returns words found in tweets of sentiment, which are missing in the lexical resources of sentiment
+        :param sentiment: sentiment of tweets and lexical resources to be checked
+        """
+        query = read_query(PATH_SQL_PIPELINE3)
+        query_parameters: Dict[str, str] = {"sentiment": sentiment}
+
+        self.cursor.execute(query, query_parameters)
+        result = self.cursor.fetchall()
+        # get words found out of query result, which is a list of tuples
+        words_found = [result_tuple[0] for result_tuple in result]
+        return words_found

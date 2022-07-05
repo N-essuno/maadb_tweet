@@ -12,14 +12,20 @@ token_list = [token1, token2]
 
 # test lexical resources
 lex_res_1: LexicalResource = LexicalResource("filename1", "Joy")
-lex_res_2: LexicalResource = LexicalResource("filename2", "sentiment2")
+lex_res_2: LexicalResource = LexicalResource("filename2", "Sadness")
 
-lex_res_1.add_word("mi")
-lex_res_1.add_word("piace")
+lex_res_1.add_word("angry")
+lex_res_1.add_word("banana")
 lex_res_1.add_word("Gianguria")
 
 lex_res_2.add_word("pinocchio")
 lex_res_2.add_word("ginocchio")
+
+# test tweets
+tweet1: Tweet = Tweet("i'm getting shapy again 😑 😐 😕 😔 😞 😣 😖 😩😫", 5, "Sadness")
+tweet2: Tweet = Tweet("angry Pensa is imho imho imho imho imho imho imho imho imho imho imho angry pensa sad #gervaso "
+                      "banana no", 0, "Joy")
+tweet3: Tweet = Tweet("i am embarrassed that you were even with me lol. #yuck #fuckyou ", 0, "Sadness")
 
 
 def test_db_connection():
@@ -48,10 +54,6 @@ def test_insert_contents(content_type: str):
 
 
 def test_insert_tweets():
-    tweet1: Tweet = Tweet("mi piace ballar mi piace cantar", 0, "Joy")
-    tweet2: Tweet = Tweet("mi piace ballar mi piace cantar e giocar, yes honey", 0, "Joy")
-    tweet3: Tweet = Tweet("yes honey :'(", 0, "Sadness")
-
     connection = test_db_connection()
     connection.insert_tweets([tweet1, tweet2, tweet3])
 
@@ -87,5 +89,11 @@ def test_pipeline2():
     print(words)
 
 
+def test_pipeline3():
+    conn = test_db_connection()
+    words = conn.pipeline3("Joy")
+    print(words)
+
+
 if __name__ == "__main__":
-    test_insert_tweets()
+    test_pipeline3()
