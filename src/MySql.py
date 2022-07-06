@@ -11,9 +11,12 @@ from src.LexicalResource import LexicalResource
 from src.Token import Token
 from src.Tweet import Tweet
 
-PATH_SQL_PIPELINE1 = "src/queries/pipeline1.sql"
-PATH_SQL_PIPELINE2 = "src/queries/pipeline2.sql"
-PATH_SQL_PIPELINE3 = "src/queries/pipeline3.sql"
+PATH_CURRENT_DIRECTORY: Path = pathlib.Path(__file__).parent.resolve()
+
+PATH_SQL_FILES: Path = PATH_CURRENT_DIRECTORY.joinpath("queries")
+PATH_SQL_PIPELINE1: Path = PATH_SQL_FILES.joinpath("pipeline1.sql")
+PATH_SQL_PIPELINE2: Path = PATH_SQL_FILES.joinpath("pipeline2.sql")
+PATH_SQL_PIPELINE3: Path = PATH_SQL_FILES.joinpath("pipeline3.sql")
 
 
 def read_query(path: Path) -> str:
