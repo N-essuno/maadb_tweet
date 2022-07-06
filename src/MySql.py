@@ -11,12 +11,9 @@ from src.LexicalResource import LexicalResource
 from src.Token import Token
 from src.Tweet import Tweet
 
-PATH_CURRENT_DIRECTORY: Path = pathlib.Path(__file__).parent.resolve()
-
-PATH_SQL_FILES: Path = PATH_CURRENT_DIRECTORY.joinpath("queries")
-PATH_SQL_PIPELINE1: Path = PATH_SQL_FILES.joinpath("pipeline1.sql")
-PATH_SQL_PIPELINE2: Path = PATH_SQL_FILES.joinpath("pipeline2.sql")
-PATH_SQL_PIPELINE3: Path = PATH_SQL_FILES.joinpath("pipeline3.sql")
+PATH_SQL_PIPELINE1 = "src/queries/pipeline1.sql"
+PATH_SQL_PIPELINE2 = "src/queries/pipeline2.sql"
+PATH_SQL_PIPELINE3 = "src/queries/pipeline3.sql"
 
 
 def read_query(path: Path) -> str:
@@ -84,8 +81,8 @@ class DBConnection:
         if not self.already_connected_mariadb:
             try:
                 self.db_connection = mariadb.connect(
-                    user="root",
-                    password="test",
+                    user="armando",
+                    password="armando",
                     host="localhost",
                     port=3306,
                     database="progetto"
@@ -115,8 +112,12 @@ class DBConnection:
         select_query = "SELECT * FROM token WHERE content IN (%s);"
 
         # add tokens_content to select_query
-        self.cursor.execute(select_query % ','.join(['%s'] * len(tokens_content)), tokens_content)
-        select_result: List[Tuple] = self.cursor.fetchall()
+        result = split_list(tokens_content, 1000)
+        select_result: List[Tuple] = []
+        #print(result[0])
+        for token_content_list in result:
+            self.cursor.execute(select_query % ','.join(['%s'] * len(token_content_list)), token_content_list)
+            select_result += self.cursor.fetchall()
 
         tokens_found: List[Token] = []
         for token_tuple in select_result:
@@ -289,9 +290,6 @@ class DBConnection:
         num_words_found: int = result[0][0]
         num_total_words: int = len(lex_res.words)
 
-        print(num_total_words)
-        print(num_words_found)
-
         return num_words_found / num_total_words
 
     def pipeline3(self, sentiment: str) -> List[str]:
@@ -307,3 +305,7 @@ class DBConnection:
         # get words found out of query result, which is a list of tuples
         words_found = [result_tuple[0] for result_tuple in result]
         return words_found
+
+def split_list(list, n_chunks):
+    k, m = divmod(len(list), n_chunks)
+    return (list[i * k + min(i, m):(i + 1) * k + min(i + 1, m)] for i in range(n_chunks))
