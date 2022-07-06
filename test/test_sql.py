@@ -22,10 +22,10 @@ lex_res_2.add_word("pinocchio")
 lex_res_2.add_word("ginocchio")
 
 # test tweets
-tweet1: Tweet = Tweet("i'm getting shapy again 😑 😐 😕 😔 😞 😣 😖 😩😫", 5, "sadness")
+tweet1: Tweet = Tweet("i'm getting shapy again 😑 😐 😕 😔 😞 😣 😖 😩😫", 5, "Sadness")
 tweet2: Tweet = Tweet("angry Pensa is imho imho imho imho imho imho imho imho imho imho imho angry pensa sad #gervaso "
-                      "banana no", 0, "joy")
-tweet3: Tweet = Tweet("i am embarrassed that you were even with me lol. #yuck #fuckyou ", 0, "sadness")
+                      "banana no", 0, "Joy")
+tweet3: Tweet = Tweet("i am embarrassed that you were even with me lol. #yuck #fuckyou ", 0, "Sadness")
 
 
 def test_db_connection():
@@ -92,13 +92,9 @@ def test_pipeline2():
 
 def test_pipeline3():
     conn = test_db_connection()
-    words = conn.pipeline3("Sadness")
+    words = conn.pipeline3("Joy")
     print(words)
 
 
 if __name__ == "__main__":
-    test_delete_all_tweets()
-    test_delete_lex_res()
-    test_insert_lexical_resources()
-    test_insert_tweets()
-    test_pipeline3()
+    test_pipeline2()

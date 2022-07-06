@@ -300,7 +300,7 @@ class DBConnection:
         :param sentiment: sentiment of tweets and lexical resources to be checked
         """
         query = read_query(PATH_SQL_PIPELINE3)
-        query_parameters: Tuple[str, str] = (sentiment.lower(), sentiment)
+        query_parameters: Tuple[str, str] = (sentiment, sentiment)
 
         self.cursor.execute(query, query_parameters)
         result = self.cursor.fetchall()
