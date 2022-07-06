@@ -7,10 +7,12 @@ class LexicalResource:
     sentiment: str
     words: Set[str]
 
-    def __init__(self, filename: str, sentiment: str):
+    def __init__(self, filename: str, sentiment: str, words: Set[str] = None):
+        if words is None:
+            words = set()
         self.filename = filename
         self.sentiment = sentiment
-        self.words = set()
+        self.words = words
 
     def __str__(self):
         lex_res_string = "LexicalResource: " + self.filename + \
